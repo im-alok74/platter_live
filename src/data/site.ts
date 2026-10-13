@@ -14,6 +14,8 @@ export const contact = {
   address: "Platter 9 (Lower Ground Floor), Rajasthan International Centre (RIC), Sansthan Path, JLN Marg, Jhalana Doongri, Jaipur, Rajasthan 302017",
   maps_url: "https://maps.app.goo.gl/yQWZKutQKqLdydDy7",
   instagram: "https://www.instagram.com/platter_cafe",
+  // ponytail: Platter's Facebook page URL not known yet; replace with the real page link.
+  facebook: "https://www.facebook.com/",
 };
 
 export const legal = { entity: "Kehwa", tagline: "A unit of Kehwa", fssai: "12223026002434", gst_number: "08AARFK0670K1ZW" };

@@ -3,11 +3,12 @@ import Link from "next/link";
 import { DishPhoto } from "@/components/dish-photo";
 import { Beans, CoffeeHero, SpinBadge, SplitText, Wave } from "@/components/fx/fx";
 import { CountUp, Magnetic } from "@/components/fx/fx-client";
-import { ArrowIcon, ClockIcon, PhoneIcon, PinIcon } from "@/components/icons";
+import { ArrowIcon, ClockIcon, CoffeeIcon, PhoneIcon, PinIcon, UtensilsIcon } from "@/components/icons";
 import { Reveal } from "@/components/motion";
 import { OpenBadge } from "@/components/open-badge";
+import { SocialOrbs } from "@/components/social";
 import { contact, gallery, hours, menu, type MenuItem } from "@/data/site";
-import { formatPrice, telHref, waHref } from "@/lib/format";
+import { formatPrice, telHref } from "@/lib/format";
 import { formatTime } from "@/lib/hours";
 
 const wrap = "mx-auto w-full max-w-6xl px-4";
@@ -35,7 +36,7 @@ function Hero() {
             <p className="mt-6 max-w-md text-base leading-relaxed text-[#d9cbbd] md:text-lg">Good coffee, good food and a table that&apos;s waiting.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Magnetic><Link href="/menu" className={primary}>See the menu <ArrowIcon width={20} height={20} /></Link></Magnetic>
-              <Magnetic><Link href="/#location" className={ghostLight}>Find us</Link></Magnetic>
+              <Magnetic><Link href="/location" className={ghostLight}>Find us</Link></Magnetic>
             </div>
             <div className="mt-7"><OpenBadge hours={hours} /></div>
           </div>
@@ -184,12 +185,42 @@ function Reel() {
   );
 }
 
-function Location() {
+const features = [
+  { Icon: CoffeeIcon, title: "Coffee & more", text: "Espresso, cold brews, frappes and shakes made to order." },
+  { Icon: UtensilsIcon, title: `${menu.reduce((n, c) => n + c.items.length, 0)} dishes`, text: "Breakfast, pizza, pasta, Chinese, tandoori and Indian mains." },
+  { Icon: ClockIcon, title: "Open all day", text: `Every day, ${formatTime(hours.open)} to ${formatTime(hours.close)}. No weekly off.` },
+  { Icon: PinIcon, title: "Easy to find", text: "Lower Ground Floor, Rajasthan International Centre, Jhalana." },
+];
+
+function Why() {
+  return (
+    <section className={`${wrap} pt-20`}>
+      <Reveal>
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-text">Why Platter</p>
+        <h2 className="display mt-2 text-5xl leading-[0.95] md:text-7xl">Come for the coffee. <em className="text-brand">Stay for the food.</em></h2>
+      </Reveal>
+      <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {features.map(({ Icon, title, text }, i) => (
+          <li key={title}>
+            <Reveal delay={i * 0.08} className="h-full rounded-3xl border border-border bg-surface p-6 shadow-card">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand"><Icon width={26} height={26} /></span>
+              <h3 className="mt-4 text-xl font-semibold">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>
+            </Reveal>
+          </li>
+        ))}
+      </ul>
+      <Link href="/about" className="mt-6 inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-brand">Our story <ArrowIcon width={18} height={18} /></Link>
+    </section>
+  );
+}
+
+function Visit() {
   const row = "flex items-start gap-3";
   return (
-    <section id="location" className={`${wrap} scroll-mt-24 pt-20`}>
+    <section className={`${wrap} pt-20`}>
       <Reveal>
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-text">Location</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-text">Visit us</p>
         <h2 className="display mt-2 text-5xl leading-[0.95] md:text-7xl">Find <em className="text-brand">us.</em></h2>
       </Reveal>
       <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -197,7 +228,11 @@ function Location() {
           <div className="h-full space-y-5 rounded-3xl border border-border bg-surface p-6 shadow-card">
             <p className={row}><PinIcon className="mt-0.5 shrink-0 text-brand" /><span className="leading-relaxed">{contact.address}</span></p>
             <p className={row}><ClockIcon className="mt-0.5 shrink-0 text-brand" /><span>Every day, {formatTime(hours.open)} to {formatTime(hours.close)}. No weekly off.</span></p>
-            <a href={contact.maps_url} target="_blank" rel="noopener noreferrer" className={primary}>Get directions</a>
+            <p className={row}><PhoneIcon className="mt-0.5 shrink-0 text-brand" /><a className="inline-flex min-h-11 items-center font-medium text-brand" href={telHref(contact.phone)}>{contact.phone.replace("+91", "+91 ")}</a></p>
+            <div className="flex flex-wrap gap-3 pt-1">
+              <a href={contact.maps_url} target="_blank" rel="noopener noreferrer" className={primary}>Get directions</a>
+              <Link href="/location" className={ghost}>Location details</Link>
+            </div>
           </div>
         </Reveal>
         <Reveal delay={0.08}>
@@ -208,21 +243,17 @@ function Location() {
   );
 }
 
-function Contact() {
+function Social() {
   return (
-    <section id="contact" className={`${wrap} scroll-mt-24 pt-20`}>
-      <Reveal>
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-text">Contact</p>
-        <h2 className="display mt-2 text-5xl leading-[0.95] md:text-7xl">Say <em className="text-brand">hello.</em></h2>
-      </Reveal>
-      <Reveal>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a href={telHref(contact.phone)} className={primary}><PhoneIcon width={20} height={20} /> {contact.phone.replace("+91", "+91 ")}</a>
-          <a href={waHref(contact.whatsapp)} target="_blank" rel="noopener noreferrer" className={ghost}>WhatsApp</a>
-          <a href={contact.instagram} target="_blank" rel="noopener noreferrer" className={ghost}>Instagram</a>
-          <a href={`mailto:${contact.email}`} className={ghost}>{contact.email}</a>
-        </div>
-      </Reveal>
+    <section className="mt-24 bg-sand py-16">
+      <div className={`${wrap} flex flex-col items-start justify-between gap-10 md:flex-row md:items-center`}>
+        <Reveal>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-text">Follow along</p>
+          <h2 className="display mt-2 text-5xl leading-[0.95] md:text-7xl">Say hi on <em className="text-brand">social.</em></h2>
+          <p className="mt-4 max-w-md text-muted">Fresh dishes, new menu items and everything happening at Platter. Or call and WhatsApp us from the <Link href="/contact" className="font-semibold text-brand underline-offset-4 hover:underline">contact page</Link>.</p>
+        </Reveal>
+        <SocialOrbs className="pr-4" />
+      </div>
     </section>
   );
 }
@@ -253,8 +284,9 @@ export default function Home() {
       <Picks />
       <Stats />
       <Reel />
-      <Location />
-      <Contact />
+      <Why />
+      <Social />
+      <Visit />
       <Closing />
     </main>
   );

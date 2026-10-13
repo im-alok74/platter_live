@@ -12,7 +12,7 @@ export default function MenuPage() {
   return (
     <main>
       <h1 className="sr-only">Platter menu</h1>
-      <MenuBrowser categories={menu} summary="Prices in rupees, taxes as applicable" />
+      <MenuBrowser categories={menu} summary="Prices in rupees, taxes as applicable. Photos are for representation" />
     </main>
   );
 }

@@ -4,9 +4,10 @@ import { telHref } from "@/lib/format";
 import { formatTime } from "@/lib/hours";
 import { OpenBadge } from "./open-badge";
 import { ThemeToggle } from "./theme-toggle";
+import { FacebookIcon, InstagramIcon } from "./social";
 import { Wordmark } from "./wordmark";
 
-const links = [["/", "Home"], ["/menu", "Menu"], ["/#location", "Location"], ["/#contact", "Contact"]] as const;
+const links = [["/", "Home"], ["/menu", "Menu"], ["/about", "About"], ["/location", "Location"], ["/contact", "Contact"]] as const;
 
 export function SiteHeader() {
   return (
@@ -24,7 +25,7 @@ export function SiteHeader() {
         </div>
       </header>
       <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 pb-[env(safe-area-inset-bottom)] backdrop-blur lg:hidden">
-        <ul className="mx-auto grid max-w-xl grid-cols-4">
+        <ul className="mx-auto grid max-w-xl grid-cols-5">
           {links.map(([h, l]) => (
             <li key={h}><Link href={h} className="flex min-h-14 items-center justify-center text-xs font-medium text-muted transition-colors active:scale-95">{l}</Link></li>
           ))}
@@ -37,13 +38,22 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="mt-20 bg-espresso pb-28 text-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-12 md:flex-row md:items-end md:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 md:flex-row md:items-end md:justify-between">
         <div>
           <Wordmark className="text-5xl !text-white" />
           <p className="mt-2 text-sm text-white/60">{legal.tagline}</p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">Every day, {formatTime(hours.open)} to {formatTime(hours.close)}. Jhalana, Jaipur.</p>
         </div>
-        <p className="text-sm"><a className="inline-flex min-h-11 items-center font-medium underline-offset-4 hover:underline" href={telHref(contact.phone)}>{contact.phone.replace("+91", "+91 ")}</a></p>
+        <nav aria-label="Footer" className="flex flex-wrap gap-x-6 text-sm text-white/70">
+          {links.map(([h, l]) => <Link key={h} href={h} className="inline-flex min-h-11 items-center hover:text-white">{l}</Link>)}
+        </nav>
+        <div className="flex flex-col gap-2 md:items-end">
+          <a className="inline-flex min-h-11 items-center text-sm font-medium underline-offset-4 hover:underline" href={telHref(contact.phone)}>{contact.phone.replace("+91", "+91 ")}</a>
+          <div className="flex gap-3">
+            <a href={contact.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"><InstagramIcon /></a>
+            <a href={contact.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"><FacebookIcon /></a>
+          </div>
+        </div>
       </div>
       <div className="mx-auto max-w-6xl border-t border-white/10 px-4 pt-6 text-xs leading-relaxed text-white/50">
         FSSAI Lic. No. {legal.fssai} · GST {legal.gst_number} · {legal.entity}. Menu prices as shown in the cafe; taxes as applicable.

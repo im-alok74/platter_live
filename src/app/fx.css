@@ -101,3 +101,12 @@
   .stack > li { position: static; }
   .tilt:hover { transform: none !important; }
 }
+
+/* ---------- Social logos ---------- */
+.social-orb { position: relative; animation: orb-float 4.5s ease-in-out infinite; }
+.social-orb:nth-child(2) { animation-delay: -2.2s; }
+.social-orb::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: inherit; animation: orb-ping 2.8s ease-out infinite; z-index: -1; }
+.social-orb:nth-child(2)::before { animation-delay: -1.4s; }
+@keyframes orb-float { 50% { transform: translateY(-10px) rotate(-4deg); } }
+@keyframes orb-ping { 0% { transform: scale(1); opacity: 0.55; } 100% { transform: scale(1.7); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .social-orb, .social-orb::before { animation: none !important; } }
