@@ -1,0 +1,2662 @@
+[
+ {
+  "id": "2041e433-9a06-4d88-b374-d0084516909c",
+  "name": "Breakfast",
+  "slug": "breakfast",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/breakfast.jpg"
+  },
+  "items": [
+   {
+    "id": "e63b66ff-490c-4701-894e-801c1c4c346a",
+    "name": "Poha",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 80,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": {
+     "url": "https://res.cloudinary.com/l89nkrnd/image/upload/v1791433332/platter/menu/g65rafuween3aoigyl2e"
+    },
+    "variants": []
+   },
+   {
+    "id": "ce7173d1-3fde-4738-b275-031a0a9bec2d",
+    "name": "Toast with Butter and Jam",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 50,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "26710a9c-f597-4c01-a6e3-41850ac26558",
+    "name": "Guacamole Toast",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "53ada3b2-2812-46b7-9f1d-2e5bb0fb0083",
+    "name": "Cheese Chilli Toast",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 210,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "afcd7f74-7041-488d-8074-9f9dd1950515",
+    "name": "Coleslaw Sandwich",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "f09fb103-1f3a-4187-a4d0-b7b508081bb1",
+    "name": "PP Samosa",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 70,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "088830a8-1461-4d96-9538-802d0d49f766",
+    "name": "Poori Bhaji",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 80,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "6019ed8a-3f04-4f3f-b98f-5b29dc009b75",
+    "name": "Aloo Paratha",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 70,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "9f318780-ea1f-4190-a80e-d1f8b3ff74cc",
+    "name": "Aloo Pyaaz Paratha",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 90,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "5dc9e5da-067f-4224-9ee5-bd1ac2a25680",
+    "name": "Paneer Paratha",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 100,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "b6c8ec1e-38f7-4967-83ef-0cb257715d02",
+    "name": "Hashbrown with Fries",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "34e5fa51-a20d-4a0f-9491-9e59ebce9aaa",
+    "name": "Idli Sambhar",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 100,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "e031b922-bf32-4566-b40b-d61658b84c35",
+    "name": "Plain Dosa",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 120,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "9704fa13-6bb0-42b7-9542-ee999cbff3f8",
+    "name": "Masala Dosa",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "2a358bd5-8b15-401c-93a1-f83a99e1ae12",
+    "name": "Plain Uttapam",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 160,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "4bc82d07-06bd-489b-b07e-d3f61a935c2a",
+    "name": "Chilli Cheese Uttapam",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "ee65f9dc-56f1-40b8-9ad7-447311689600",
+    "name": "Onion Uttapam",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 170,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "b16c66b6-94eb-47df-87af-283234755f91",
+    "name": "Fried Idli",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 150,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "39ce471b-19fd-4db4-b5fa-5505c59da8ed",
+    "name": "Classic Frappe",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 170,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "f0ff4593-2223-404c-b65a-61fef14791f5",
+  "name": "Hot Coffee",
+  "slug": "hot-coffee",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/hot-coffee.jpg"
+  },
+  "items": [
+   {
+    "id": "0acdaddf-bd54-4c8e-bc29-8542f8934337",
+    "name": "Espresso",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 110,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": {
+     "url": "https://res.cloudinary.com/l89nkrnd/image/upload/v1791433334/platter/menu/sxgxkqkpoyeg5jym09xq"
+    },
+    "variants": []
+   },
+   {
+    "id": "f7d1f3c0-24d9-4e73-b9bf-23273096e476",
+    "name": "Espresso Macchiato",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 130,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "3a955a14-cc7e-4a5a-83f2-fd79fc31829a",
+    "name": "Americano",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 140,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "eba61bd2-a01d-4aa4-a7bb-92ff61bf8ce7",
+    "name": "Cappuccino",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 160,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "1cf8864c-1e3b-4a4e-a381-0bfbccb78134",
+    "name": "Café Latte",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 170,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "2c657376-277b-4283-a075-55197ed6d3b3",
+    "name": "Flat White",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "2a699787-4dcd-456b-9409-7df4acaee5e5",
+    "name": "Café Mocha",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "2578c916-62aa-408f-b5e7-54f4abc99c85",
+  "name": "Tea",
+  "slug": "tea",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/tea.jpg"
+  },
+  "items": [
+   {
+    "id": "7e1b5839-1d83-4c9f-944f-ed2b758a5115",
+    "name": "Masala Chai",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 50,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": {
+     "url": "https://res.cloudinary.com/l89nkrnd/image/upload/v1791433336/platter/menu/cdetwcyozvewx39w0sk3"
+    },
+    "variants": []
+   },
+   {
+    "id": "921e6a78-2749-4d54-ba80-551328357340",
+    "name": "Ginger Tea",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 60,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "6967c715-d771-4e67-9360-62619681f3f0",
+    "name": "Green Tea",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 60,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "d69278ea-14ae-4edf-adcc-93be5d0fbe26",
+    "name": "Lemon & Honey Tea",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 70,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "6d8485bd-f307-4ccb-8c27-9153c14c3361",
+  "name": "Cold Brew",
+  "slug": "cold-brew",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/cold-brew.jpg"
+  },
+  "items": [
+   {
+    "id": "6c75fee7-5df0-47ba-9b72-24f414868d69",
+    "name": "Iced Americano",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 140,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": {
+     "url": "https://res.cloudinary.com/l89nkrnd/image/upload/v1791433338/platter/menu/a4vryhwxeo3xxsf9ohsa"
+    },
+    "variants": []
+   },
+   {
+    "id": "e42fce9e-3e02-482c-ba72-9ae329e2976d",
+    "name": "Iced Cappuccino",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 160,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "68949720-cfed-452e-8940-d8099e498b7b",
+    "name": "Iced Latte",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 170,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "5adc3b8f-37be-4a87-a9db-12b9fb09e241",
+    "name": "Iced Mocha",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "f2d9d67c-6389-433b-8581-8e330899a0ae",
+    "name": "Vietnamese Cold Brew",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 190,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "395d0804-53e8-4694-b942-edb21d563dd6",
+  "name": "Iced Tea & Sparkling",
+  "slug": "iced-tea-sparkling",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/iced-tea-sparkling.jpg"
+  },
+  "items": [
+   {
+    "id": "2f171a6e-1d80-4b6f-8438-1b11cd3ef496",
+    "name": "Lemon Iced Tea",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 140,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": {
+     "url": "https://res.cloudinary.com/l89nkrnd/image/upload/v1791433340/platter/menu/idwogyq0tkpozxpaj1sy"
+    },
+    "variants": []
+   },
+   {
+    "id": "7b7abbbd-142c-419f-be6c-958b4d2514e0",
+    "name": "Peach Iced Tea",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 150,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "ae35ee3f-6163-4404-bb04-737fab1bf6ab",
+    "name": "Virgin Mojito",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 130,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "a58dc1da-b45f-488d-a439-5f74192ab59b",
+    "name": "Green Apple Soda",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 120,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "ca861626-c14a-4182-875d-5eeebde8323d",
+    "name": "Fresh Lime Soda / Water",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 100,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "91fa2e42-a31b-495f-94f2-8dcd5426d260",
+    "name": "Raspberry Bliss",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "8e1d4609-4358-4e01-80d0-f30933559339",
+  "name": "Frappes",
+  "slug": "frappes",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/frappes.jpg"
+  },
+  "items": [
+   {
+    "id": "fa3126fa-eb32-40dd-a899-d54ff3bae369",
+    "name": "Iced Café Royale",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 170,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": {
+     "url": "https://res.cloudinary.com/l89nkrnd/image/upload/v1791433341/platter/menu/a3ujzysuuw4ltmu3v12k"
+    },
+    "variants": []
+   },
+   {
+    "id": "338dfca0-0e5e-49d4-8509-007072e571ac",
+    "name": "Frappe Choco Blast",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 190,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "fa86207f-f2d5-431f-9ac0-faaf1f7dfabb",
+    "name": "Cream & Oreo Frappe",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "6b8e63f4-a66c-4c57-9e61-689a5b85f4ab",
+  "name": "Shakes",
+  "slug": "shakes",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/shakes.jpg"
+  },
+  "items": [
+   {
+    "id": "af9a2068-c8e8-4272-82ee-3356cd1666aa",
+    "name": "Belgian Chocolate Shake",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 250,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": {
+     "url": "https://res.cloudinary.com/l89nkrnd/image/upload/v1791433343/platter/menu/oirsyupr88ymkwv9fsu3"
+    },
+    "variants": []
+   },
+   {
+    "id": "d5e370fe-ce7d-4f5b-9ec6-86e3d53f9518",
+    "name": "Nutella Shake",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 260,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "63ffcf3d-3e58-4c5e-bb5d-574ccf54c807",
+    "name": "Biscoff Shake",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 240,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "472a486a-43d9-4525-b2ae-1ec571ec659a",
+    "name": "Oreo / Kit Kat / Caramel Shake",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": [
+     {
+      "id": "472a486a-43d9-4525-b2ae-1ec571ec659a-0",
+      "name": "Oreo",
+      "price": 200
+     },
+     {
+      "id": "472a486a-43d9-4525-b2ae-1ec571ec659a-1",
+      "name": "Kit Kat",
+      "price": 200
+     },
+     {
+      "id": "472a486a-43d9-4525-b2ae-1ec571ec659a-2",
+      "name": "Caramel",
+      "price": 200
+     }
+    ]
+   },
+   {
+    "id": "5b182334-5ba0-415d-b0cf-f2a708b8c251",
+    "name": "Strawberry / Vanilla / Mango Shake",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": [
+     {
+      "id": "5b182334-5ba0-415d-b0cf-f2a708b8c251-0",
+      "name": "Strawberry",
+      "price": 200
+     },
+     {
+      "id": "5b182334-5ba0-415d-b0cf-f2a708b8c251-1",
+      "name": "Vanilla",
+      "price": 200
+     },
+     {
+      "id": "5b182334-5ba0-415d-b0cf-f2a708b8c251-2",
+      "name": "Mango",
+      "price": 200
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "07ab9ff1-d8ae-466e-ba0d-93bea82f9ab5",
+  "name": "Soups",
+  "slug": "soups",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/soups.jpg"
+  },
+  "items": [
+   {
+    "id": "398e16d2-20c9-48e8-a15f-a1589496db80",
+    "name": "Tomato Soup",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": {
+     "url": "https://res.cloudinary.com/l89nkrnd/image/upload/v1791433344/platter/menu/kibs5nqo9ad7pxn9hh55"
+    },
+    "variants": []
+   },
+   {
+    "id": "37238c69-b6da-45d7-b06c-0ea4a38ef54c",
+    "name": "Hot N Sour Soup",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 180,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "1cdae22e-f53a-4270-a5e5-e68ad27a9326",
+    "name": "Lemon Coriander Soup",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 160,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "d9d9b674-b866-41ab-a810-5f9fac85cef5",
+    "name": "Sweet Corn Soup",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 150,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "500bd84c-7d2f-4013-8ca8-4cad32fc49e5",
+  "name": "Veg Snacks",
+  "slug": "veg-snacks",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/veg-snacks.jpg"
+  },
+  "items": [
+   {
+    "id": "de11a763-4265-4875-880b-3bb3183de808",
+    "name": "Paneer Tikka",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "86f021ff-3c6e-4c91-bd24-0cf99c2ab7f3",
+    "name": "Tandoori Aloo",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 230,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "cfbc9805-6f3d-4fef-8b0d-b4b490e886fc",
+    "name": "Dahi Kebab",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 260,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "1d01f3ba-dde3-4e56-8462-8638ba6b0182",
+    "name": "Hara Bhara Kebab",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 220,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "412ee8bf-7d40-4789-bee9-7df9d240b290",
+  "name": "Non Veg Snacks",
+  "slug": "non-veg-snacks",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/non-veg-snacks.jpg"
+  },
+  "items": [
+   {
+    "id": "b1363ed1-fb3f-4c5d-8913-0182ce6bb89c",
+    "name": "Chicken Tikka",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 360,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "55851616-36f3-464b-93ac-3b3aa5a34fc4",
+    "name": "Malai Chicken Tikka",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 380,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "43da9ce8-3b9f-4a93-ad91-772e5c80789a",
+    "name": "Fish Tikka",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 350,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "c9956e4c-8065-44ef-8dfa-65ab7a39e436",
+    "name": "Fish Fingers",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 250,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "70bfcc69-398e-480a-bdc6-487d8f49dc52",
+  "name": "Salads",
+  "slug": "salads",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/salads.jpg"
+  },
+  "items": [
+   {
+    "id": "b52ef875-c74b-4f15-9be8-530ef7aacee0",
+    "name": "Classic Greek Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 390,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "cf679238-e094-4b58-8c18-8ef446079dcf",
+    "name": "Caesar Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 320,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "4e938d7d-c31f-4c20-97fe-403313e7b09c",
+    "name": "Chicken Caesar Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 460,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "c2e6802d-5fb9-42d5-95ab-84b18676d49b",
+    "name": "BBQ Cottage Cheese Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 400,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "d3686207-e90a-43a0-a12c-b25c6f87722d",
+    "name": "BBQ Chicken Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 460,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "24a0b546-bfba-40f3-8560-3e4fa372fd58",
+    "name": "Crispy Pizza Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 400,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "a10783dd-aebc-4a32-a5b6-5bb2b82538fc",
+    "name": "Quinoa Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 350,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "b1a54958-863e-4a64-b4d2-628550034491",
+    "name": "Mexican Bean Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 250,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "fd67eb8f-8c39-44aa-81a5-13503db3188a",
+    "name": "Foxtail Millet Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 350,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "5c9f682f-13e5-45a9-8922-d1e1894d493f",
+    "name": "Green Salad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 70,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "c4dfee27-fd64-46a3-ab94-cbb0f54df80c",
+  "name": "Sandwich, Burger & Wraps",
+  "slug": "sandwich-burger-wraps",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/sandwich-burger-wraps.jpg"
+  },
+  "items": [
+   {
+    "id": "92e8d86d-6994-4324-9392-1d36e128b21f",
+    "name": "Veg Grilled Sandwich",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 280,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "72ecdd5b-fe2c-42aa-8063-28caffc62181",
+    "name": "Paneer Tikka Sandwich",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "99304670-0d8c-46f6-9140-c8b7b9eedb94",
+    "name": "Vegetable Quesadilla",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 350,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "62e73235-067a-4f5e-9dc3-8f8ba470fc94",
+    "name": "Veg Fire House Burger",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 210,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "40f1ba86-6034-48da-a063-e1b6b8002df0",
+    "name": "Veg Kathi Roll",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 170,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "8734b807-9873-441b-b7e1-ac35fa3d1258",
+  "name": "Pastas",
+  "slug": "pastas",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/pastas.jpg"
+  },
+  "items": [
+   {
+    "id": "4d1eeeb7-0860-497d-974a-5e711e5d3d21",
+    "name": "Alfredo Pasta",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 399,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "55b4a506-282f-4663-973f-ec07a405a7f6",
+    "name": "Pasta Arrabiata",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 330,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "d68c3ac7-9544-4ddf-a799-a19756ab0024",
+    "name": "Spaghetti Primavera",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 350,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "fd9707d4-f571-4420-8838-d18af46dadef",
+    "name": "Spaghetti AOP",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 399,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "433371ef-08b9-4a3a-95fc-cf7c3537cf86",
+    "name": "Veg Lasagne",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 350,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "872a98c1-b41f-47b3-be33-fb89eda4034b",
+    "name": "Baked Vegetables",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 410,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "5fa06111-e97c-46ee-b164-68825de4c534",
+  "name": "Bites from the World",
+  "slug": "bites",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/bites.jpg"
+  },
+  "items": [
+   {
+    "id": "fe4358ce-c8cf-4a05-bfb4-671acb68a656",
+    "name": "Cajun Spiced Potato Wedges",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "b959c359-ec03-4c5a-b1bf-5a95252b09e2",
+    "name": "Basil Tomato Crostini",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 220,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "98671306-6138-466b-a159-f2b10e71a2e6",
+    "name": "Classic French Fries",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 120,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "7011d380-15ce-4b82-9c50-13480882b4ee",
+    "name": "Peri Peri Fries",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 130,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "ecd21aa1-9036-4177-b648-609a906a7bb9",
+    "name": "Cheese Garlic Bread",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "82c45213-e7ad-429d-bce8-69e47599e1f8",
+    "name": "Cheese Corn Balls",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 170,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "be3504cb-305a-4fa1-af31-24a8c9ba9baf",
+    "name": "Jalapeno Cheese Poppers",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 220,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "e2858a0f-b041-4ef9-923f-06c25bd70b41",
+    "name": "Samosa",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 70,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "05342984-f446-45e3-bd17-710d474383ad",
+  "name": "Pizzas",
+  "slug": "pizzas",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/pizzas.jpg"
+  },
+  "items": [
+   {
+    "id": "6d978ffa-00b9-41bc-b10c-e82569140a3d",
+    "name": "Classico Margherita",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 280,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "3a8b8047-2057-470a-9e81-6e8b589b92e8",
+    "name": "Simply Veg",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 325,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "c9013270-9cee-40ed-92f0-c9633fe58d2c",
+    "name": "Pizza Ala Fungi",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 340,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "2e367f44-e096-421a-80cc-b313b7b43fa6",
+    "name": "Paneer Tikka Pizza",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 400,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "4a9970d1-4136-4192-81d2-45322f351e50",
+    "name": "Veg Supreme Pizza",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 420,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "71504b8a-9d7b-4399-82b6-9ea50d97be8d",
+    "name": "Pizza Puttanesca",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 425,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "247dfd76-3725-407c-848d-92228e49fc9a",
+    "name": "BBQ Cottage Cheese Pizza",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 450,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "99991a1d-eb9d-4dcf-93ac-ba2e1f16f591",
+    "name": "Herbed Margherita",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "c669cef5-f7bd-4699-a719-fdd2c55caaf6",
+    "name": "Fungi with Truffle Oil",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 475,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "d9ba7a74-4fa7-4fea-9ab4-c7cbab8b9360",
+    "name": "Quattro Formaggi",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 425,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "0753b14c-603b-47ff-a9a4-ca657c259372",
+  "name": "Chinese",
+  "slug": "chinese",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/chinese.jpg"
+  },
+  "items": [
+   {
+    "id": "31109c75-47b7-4665-a8ca-2cbc5deb4ce2",
+    "name": "Chilli Paneer",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 220,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": [
+     {
+      "id": "31109c75-47b7-4665-a8ca-2cbc5deb4ce2-0",
+      "name": "Dry",
+      "price": 220
+     },
+     {
+      "id": "31109c75-47b7-4665-a8ca-2cbc5deb4ce2-1",
+      "name": "Gravy",
+      "price": 220
+     }
+    ]
+   },
+   {
+    "id": "f269f0e2-e072-4d5b-bfd5-559b09763e7a",
+    "name": "Crispy Spring Rolls",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 170,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "d991a55b-8fb5-43c4-86a6-e4f399a7f297",
+    "name": "Honey Chilli Potato",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 210,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "15961016-e122-45f7-bdbc-2f3793405789",
+    "name": "Crispy Corn",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 230,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "bb438d08-ade4-456c-b125-08972dc978db",
+    "name": "Veg Manchurian",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 280,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": [
+     {
+      "id": "bb438d08-ade4-456c-b125-08972dc978db-0",
+      "name": "Dry",
+      "price": 280
+     },
+     {
+      "id": "bb438d08-ade4-456c-b125-08972dc978db-1",
+      "name": "Gravy",
+      "price": 280
+     }
+    ]
+   },
+   {
+    "id": "46723c58-277f-4507-8b56-8258b178380e",
+    "name": "Veg Fried Rice",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 150,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "22bece12-a8ee-4ade-a659-362e3c923ef4",
+    "name": "Hakka Noodles",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 140,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "9f759fd6-dabd-4cfb-afc4-6d08ee349720",
+    "name": "Chilli Garlic Noodles",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 175,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "85ca1c3d-86b2-498a-90b3-ad5040eec410",
+    "name": "Chilly Chicken",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 340,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "61aef039-e7ff-4e1d-a631-fa8962d816a3",
+    "name": "Kung Pao Chicken Bites",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 400,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "b9429112-ad9b-4684-bfbc-8cdc14d4eaf1",
+  "name": "Main Course",
+  "slug": "main-course",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/main-course.jpg"
+  },
+  "items": [
+   {
+    "id": "51e31004-11fb-46fc-8d45-8995cf2758a8",
+    "name": "Dal Tadka",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "bb880acf-79f9-459b-a034-9fd10804a1fb",
+    "name": "Dal Makhani",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 275,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "21df89ac-d370-4549-909c-6d733307128d",
+    "name": "Paneer Lababdar",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 310,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "64fd07c7-fc14-4398-a99e-9fefa69be378",
+    "name": "Paneer Butter Masala",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 290,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "4abcc915-a068-4540-9c81-75498eab6b49",
+    "name": "Kadhai Paneer",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 320,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "3ea60bd9-005f-4207-93f5-afa8768d0bfb",
+    "name": "Paneer Khurchan",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "f5ce91f1-5b05-4de1-a80c-4a7cfe6fc35d",
+    "name": "Palak Paneer",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 290,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "8a05f219-6f6e-4a43-9df8-56ae766b801e",
+    "name": "Malai Kofta",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "ddaf647a-f354-4040-9902-dcd204d80bb1",
+    "name": "Mix Veg",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 330,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "d6e67e41-e361-493b-a4f6-2831a4c86373",
+    "name": "Aloo Pyaaz",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 250,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "6ae6a9ac-de36-4b6e-8b7d-50c4e5613b43",
+    "name": "Gatta Masala",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 290,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "15260e56-c0b3-4478-b1c0-dd3f97514b7f",
+    "name": "Corn Palak",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 260,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "269a2283-b374-4034-9c39-3b75de5ce99b",
+    "name": "Matar Mushroom",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 360,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "1d2515a9-11b3-40c4-9eb5-379192778412",
+    "name": "Jeera Aloo",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 175,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "3c461f2b-7cac-410c-a309-9a7ad7133067",
+    "name": "Methi Malai Matar",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "97f8fa8e-3cf2-4172-8d01-2b45e2da4d17",
+    "name": "Bhindi Masala",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "c3a34d6e-bfb1-4f92-bfaf-08d2da57ecce",
+  "name": "Rice",
+  "slug": "rice",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/rice.jpg"
+  },
+  "items": [
+   {
+    "id": "e2e8410a-6fc3-43ae-a7de-53288c5cf095",
+    "name": "Plain Rice",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 115,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "4b32f96a-d780-4b52-b027-0b24d95dc2df",
+    "name": "Jeera Rice",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 130,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "041d9c1e-42c4-472f-9d3d-20cdc16e4cb3",
+    "name": "Peas Pulao",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 140,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "7a34de18-cc78-4b4e-bab9-f5dca0add6c1",
+    "name": "Veg Pulao",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 160,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "27d5f3c3-0d32-4eef-b494-fa09d328c000",
+    "name": "Veg Biryani",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "228dc536-ba2e-42c0-a9da-01451556f1a8",
+    "name": "Chicken Biryani",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "344bb054-d7b6-4a9f-9eae-aabc5b2d2d80",
+  "name": "Curd & Papad",
+  "slug": "curd-papad",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/curd-papad.jpg"
+  },
+  "items": [
+   {
+    "id": "813d97ac-49c8-4194-90b9-0cbe48526b96",
+    "name": "Masala Chaach",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 30,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "80150644-e3c1-45ea-903d-3d614bdfac0d",
+    "name": "Plain Curd",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 50,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "55719eff-44da-47a9-bff1-a23819379b17",
+    "name": "Boondi Raita",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 60,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "6583d1a1-92c9-400e-a76f-978e62d63b8e",
+    "name": "Mix Veg Raita",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 70,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "2faae700-8088-4bd8-8ef7-e9fb4428cf79",
+    "name": "Pineapple Raita",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 85,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "54272014-4995-4882-a6e4-1eabf8d7724b",
+    "name": "Plain Papad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 20,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "5cdc51f3-50c4-419e-8fdd-fbde211f6ef3",
+    "name": "Masala Papad",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 25,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "4bbd219c-26d0-44eb-b741-0fc39ebc77fe",
+  "name": "Breads",
+  "slug": "breads",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/breads.jpg"
+  },
+  "items": [
+   {
+    "id": "1311b0b8-2fb8-41e1-aa91-b8d1b7b6c99c",
+    "name": "Tawa Roti",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 30,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "48211082-bef7-4c51-bdd1-5ced0e0bf7c6",
+    "name": "Tawa Roti Butter",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 35,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "3c687d0d-7c1a-42b1-96d4-7aeadebb849c",
+    "name": "Tandoori Roti",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 35,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "b2d4ce24-d9e5-45b9-ad1d-a587d745e665",
+    "name": "Tandoori Roti Butter",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 45,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "0973e2c4-694b-4946-8b11-9ccab3e15c07",
+    "name": "Lachha Paratha",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 60,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "9df4c390-1c2b-4da5-8183-de38f48181fe",
+    "name": "Plain Naan",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 60,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "ef6fa7c7-e4f0-46f2-bc17-95fbdca3040a",
+    "name": "Butter / Garlic Naan",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 75,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": [
+     {
+      "id": "ef6fa7c7-e4f0-46f2-bc17-95fbdca3040a-0",
+      "name": "Butter",
+      "price": 75
+     },
+     {
+      "id": "ef6fa7c7-e4f0-46f2-bc17-95fbdca3040a-1",
+      "name": "Garlic",
+      "price": 75
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "202d3e27-66be-440f-a2e7-5575082d9daa",
+  "name": "Non Veg",
+  "slug": "non-veg",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/non-veg.jpg"
+  },
+  "items": [
+   {
+    "id": "3f97dae7-eeb7-49c6-af5f-88f2b53a31d1",
+    "name": "Fish N Chips",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 300,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "ee749a6d-048c-4383-b3e4-c09ebff8c23d",
+    "name": "Butter Chicken",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 380,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": [
+     {
+      "id": "ee749a6d-048c-4383-b3e4-c09ebff8c23d-0",
+      "name": "Half",
+      "price": 380
+     },
+     {
+      "id": "ee749a6d-048c-4383-b3e4-c09ebff8c23d-1",
+      "name": "Full",
+      "price": 750
+     }
+    ]
+   },
+   {
+    "id": "0d6bcfd2-7eba-429d-a5b4-c1a8785296be",
+    "name": "Lal Maas",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 575,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "c3043c3a-6fe9-43d7-a9b8-ac68426dffdd",
+    "name": "Bhuna Gosht",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 550,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "bd349f66-a4f5-4cc7-959a-01f70c776878",
+    "name": "Mutton Roghan Josh",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 600,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "71aa0274-46bf-4ab0-add7-a4831188e79a",
+  "name": "Eggs to Order",
+  "slug": "eggs",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/eggs.jpg"
+  },
+  "items": [
+   {
+    "id": "a843056d-b719-452b-a55d-5dca751de168",
+    "name": "Plain Omelette",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 80,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "9f3d28f8-8899-4afb-8575-73f1716b59bb",
+    "name": "Masala Omelette",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 140,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "738bc24a-4228-4703-b4a6-6e191bb710ef",
+    "name": "Cheese Omelette",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 160,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "eb08863f-4a71-4643-bbc0-46806d334861",
+    "name": "Fried Eggs (Sunny Side Up)",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 130,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "3e742461-6b18-4a4f-93d8-883f10719a88",
+    "name": "Scrambled Eggs",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 150,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "243b84cf-bdce-4882-8925-e46ad50e609b",
+    "name": "French Toast",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 175,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "9143f44e-42e7-4274-bef9-cba4e139a194",
+    "name": "Boiled Eggs",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 60,
+    "is_veg": false,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ },
+ {
+  "id": "2e76f962-7ae4-43cf-b0ae-1a96bf9ce5b7",
+  "name": "Desserts",
+  "slug": "desserts",
+  "image": {
+   "url": "https://res.cloudinary.com/efgleg53/image/upload/platter/category/desserts.jpg"
+  },
+  "items": [
+   {
+    "id": "6fc1a013-304c-4a61-a3ce-1a3fee16b562",
+    "name": "Chocolate Brownie",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 160,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "3aa6c2f4-c767-430c-9351-4d2c642f5448",
+    "name": "Brownie with Ice Cream",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 200,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "a2b93962-96bc-4265-bdd1-dc3d99693306",
+    "name": "Flavoured Kulfi",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 90,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "d2c14894-bffb-4b76-9b3e-c656f9432eaf",
+    "name": "Gulab Jamun (2 pcs)",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 90,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "64802950-df5c-43cf-a351-1694ec13f9af",
+    "name": "Gulab Jamun with Vanilla",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 120,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "9b31acf2-33df-4a2d-82a8-8872261a14ca",
+    "name": "Ice Cream",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 80,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "1622494f-d5c9-467e-af19-d8fba076bf0e",
+    "name": "Seasonal Halwa",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 100,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "5fb06fe1-53d7-4fbd-89ca-ff6b5b5685b7",
+    "name": "Waffle with Chocolate Sauce",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 220,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   },
+   {
+    "id": "e01a4205-a28e-4956-8906-d2c56bcea6f3",
+    "name": "Waffle with Ice Cream",
+    "description": null,
+    "ingredients": null,
+    "method": null,
+    "price": 250,
+    "is_veg": true,
+    "badges": [],
+    "sold_out": false,
+    "is_special": false,
+    "image": null,
+    "variants": []
+   }
+  ]
+ }
+]
