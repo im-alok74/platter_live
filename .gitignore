@@ -57,3 +57,5 @@ dev.log
 
 # demo screenshots are large (about 20 MB); the scripts, SQL and notes in /demo are kept
 /demo/screenshots/
+
+.vercel
