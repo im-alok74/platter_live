@@ -49,6 +49,7 @@
   --color-nonveg: var(--nonveg);
   --font-sans: var(--font-archivo);
   --font-display: var(--font-antonio);
+  --font-serif: var(--font-cormorant);
   --radius-card: var(--radius-card);
   --radius-sheet: var(--radius-sheet);
   --shadow-card: var(--shadow-card);

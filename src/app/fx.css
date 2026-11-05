@@ -110,3 +110,18 @@
 @keyframes orb-float { 50% { transform: translateY(-10px) rotate(-4deg); } }
 @keyframes orb-ping { 0% { transform: scale(1); opacity: 0.55; } 100% { transform: scale(1.7); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .social-orb, .social-orb::before { animation: none !important; } }
+
+/* ---------- Floating plates (menu hero) ---------- */
+@keyframes plate-drift { 0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); } 50% { transform: translate3d(var(--dx, 10px), var(--dy, -18px), 0) rotate(var(--dr, 4deg)); } }
+.plate { animation: plate-drift var(--t, 9s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+@keyframes title-rise { from { transform: translateY(105%); } to { transform: none; } }
+.title-rise > span { display: inline-block; animation: title-rise 1s var(--ease-out) both; }
+@keyframes dialog-in { from { opacity: 0; transform: translateY(14px) scale(0.98); } to { opacity: 1; transform: none; } }
+dialog.dish[open] { animation: dialog-in 0.35s var(--ease-out) both; }
+dialog.dish::backdrop { background: rgb(14 8 5 / 0.82); backdrop-filter: blur(6px); }
+@media (prefers-reduced-motion: reduce) { .plate, .title-rise > span, dialog.dish[open] { animation: none !important; } }
+
+/* The line that joins the steps draws itself in. */
+@keyframes line-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.journey-line { transform-origin: left; animation: line-draw 1.6s var(--ease-out) both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
+@media (prefers-reduced-motion: reduce) { .journey-line { animation: none !important; } }

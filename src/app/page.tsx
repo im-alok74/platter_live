@@ -12,16 +12,15 @@ const eyebrow = "text-xs font-semibold uppercase tracking-[0.3em] text-gold";
 const h2 = "display mt-3 text-5xl md:text-7xl";
 const primary = "inline-flex min-h-12 items-center justify-center gap-2 bg-brand px-7 text-sm font-semibold uppercase tracking-[0.14em] text-brand-foreground transition hover:bg-foreground active:scale-[0.98]";
 const ghost = "inline-flex min-h-12 items-center justify-center gap-2 border border-foreground/40 px-7 text-sm font-semibold uppercase tracking-[0.14em] transition hover:bg-foreground/10 active:scale-[0.98]";
-const num = "font-display text-xl text-gold";
 
 const cat = (slug: string) => menu.find((c) => c.slug === slug);
 const pic = (i: number) => gallery[i % gallery.length];
 
 function Hero() {
   const tiles = [
-    { n: "01", t: "The menu", href: "/menu", img: cat("breakfast")?.image?.url },
-    { n: "02", t: "Coffee & shakes", href: "/menu#hot-coffee", img: cat("hot-coffee")?.image?.url },
-    { n: "03", t: "Visit us", href: "/location", img: pic(1)?.url },
+    { t: "The menu", href: "/menu", img: cat("breakfast")?.image?.url },
+    { t: "Coffee & shakes", href: "/menu#hot-coffee", img: cat("hot-coffee")?.image?.url },
+    { t: "Visit us", href: "/location", img: pic(1)?.url },
   ];
   return (
     <section className="relative isolate overflow-hidden bg-espresso">
@@ -56,13 +55,12 @@ function Hero() {
       <div className="absolute inset-x-0 bottom-0 z-10 border-t border-border bg-background/80 backdrop-blur-sm">
         <ul className={`${wrap} grid grid-cols-3`}>
           {tiles.map((t) => (
-            <li key={t.n} className="border-r border-border last:border-r-0">
+            <li key={t.t} className="border-r border-border last:border-r-0">
               <Link href={t.href} className="group flex items-center gap-3 px-2 py-3 md:gap-4 md:px-4">
                 <span className="relative hidden h-14 w-14 shrink-0 overflow-hidden bg-sand sm:block md:h-16 md:w-16">
                   {t.img && <Image src={t.img} alt="" fill sizes="64px" className="object-cover transition duration-500 group-hover:scale-110" />}
                 </span>
                 <span>
-                  <span className={`${num} block text-base`}>{t.n}</span>
                   <span className="block text-xs font-semibold uppercase tracking-[0.12em] md:text-sm">{t.t}</span>
                 </span>
               </Link>
@@ -95,7 +93,7 @@ function Intro() {
               <div className="relative aspect-[3/4] overflow-hidden bg-sand">
                 <Image src={g.url} alt={cap} fill sizes="(min-width: 768px) 20vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" />
               </div>
-              <p className="px-2 py-2 text-[11px] font-semibold uppercase tracking-[0.12em]"><span className="text-gold">0{i + 1}</span> {cap}</p>
+              <p className="px-2 py-2 text-[11px] font-semibold uppercase tracking-[0.12em]">{cap}</p>
             </Reveal>
           </li>
         ))}
@@ -104,28 +102,32 @@ function Intro() {
   );
 }
 
-const steps = [
-  ["Pick a table", "Walk in, sit anywhere you like and take your time with the menu."],
-  ["Choose", "Coffee, breakfast, pizza, pasta, Chinese, tandoori and Indian mains. Veg and non-veg are marked."],
-  ["Made to order", "Every plate is cooked when you order it, so it reaches you hot and fresh."],
-  ["Enjoy", "Stay for one cup or a long meal with friends. Dine in or take it away."],
+const Icon = ({ d }: { d: string }) => (
+  <svg aria-hidden viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d={d} /></svg>
+);
+const steps: [string, string, string][] = [
+  ["Pick a table", "Walk in, sit anywhere you like and take your time with the menu.", "M8 20h32M12 20v18M36 20v18M16 20c0-6 4-10 8-10s8 4 8 10"],
+  ["Choose", "Coffee, breakfast, pizza, pasta, Chinese, tandoori and Indian mains. Veg and non-veg are marked.", "M14 6h20v36H14zM19 14h10M19 21h10M19 28h6"],
+  ["Made to order", "Every plate is cooked when you order it, so it reaches you hot and fresh.", "M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-3 2-5 4-7 1 3 2 4 4 4-1-4-1-8 0-12zM14 42h20"],
+  ["Enjoy", "Stay for one cup or a long meal with friends. Dine in or take it away.", "M10 18h24v10a10 10 0 0 1-10 10 10 10 0 0 1-14-10zM34 20h4a4 4 0 0 1 0 8h-4M16 6c-2 3 2 4 0 8M22 6c-2 3 2 4 0 8"],
 ];
 
 function Journey() {
   return (
-    <section className="border-y border-border bg-sand">
+    <section className="relative border-y border-border bg-sand">
       <div className={`${wrap} py-24`}>
-        <Reveal>
+        <Reveal className="text-center">
           <p className={eyebrow}>From table to plate</p>
           <h2 className={h2}>How it <em>works</em></h2>
         </Reveal>
-        <ol className="mt-12 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map(([t, d], i) => (
-            <li key={t} className="bg-sand p-6 md:p-8">
-              <Reveal delay={i * 0.08}>
-                <span className="display block text-6xl text-gold md:text-7xl">0{i + 1}</span>
+        <ol className="relative mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <span aria-hidden className="journey-line absolute left-[12.5%] right-[12.5%] top-12 hidden h-px bg-gold/40 lg:block" />
+          {steps.map(([t, d, icon], i) => (
+            <li key={t} className="relative text-center">
+              <Reveal delay={i * 0.12}>
+                <span className="relative mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-gold/60 bg-sand text-gold transition duration-500 hover:scale-110 hover:bg-gold hover:text-espresso"><Icon d={icon} /></span>
                 <h3 className="display mt-6 text-3xl">{t}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{d}</p>
+                <p className="mx-auto mt-3 max-w-[16rem] text-sm leading-relaxed text-muted">{d}</p>
               </Reveal>
             </li>
           ))}
@@ -153,12 +155,11 @@ function Counter() {
         <h2 className={h2}>On the <em>counter</em></h2>
       </Reveal>
       <ol className="mt-12 border-t border-border">
-        {counter.map(([slug, title, text], i) => {
+        {counter.map(([slug, title, text]) => {
           const c = cat(slug);
           return (
             <li key={slug} className="border-b border-border">
-              <Link href={`/menu#${slug}`} className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 py-5 md:gap-8 md:py-6">
-                <span className="display text-3xl text-gold md:text-5xl">0{i + 1}</span>
+              <Link href={`/menu#${slug}`} className="group grid grid-cols-[1fr_auto] items-center gap-4 py-5 md:gap-8 md:py-6">
                 <span>
                   <span className="display block text-3xl leading-none transition group-hover:text-gold md:text-6xl">{title}</span>
                   <span className="mt-2 block max-w-lg text-sm text-muted">{text}</span>
@@ -216,14 +217,13 @@ function Faq() {
           <h2 className={h2}>Questions, <em>answered</em></h2>
         </Reveal>
         <div className="border-t border-border">
-          {faq.map(([q, a], i) => (
+          {faq.map(([q, a]) => (
             <details key={q} className="group border-b border-border py-5">
               <summary className="flex min-h-11 cursor-pointer list-none items-center gap-4 text-lg font-semibold">
-                <span className={num}>0{i + 1}</span>
                 <span className="flex-1">{q}</span>
                 <span aria-hidden className="text-2xl text-gold transition group-open:rotate-45">+</span>
               </summary>
-              <p className="mt-3 pl-10 text-muted">{a}</p>
+              <p className="mt-3 max-w-xl text-muted">{a}</p>
             </details>
           ))}
         </div>
@@ -240,9 +240,9 @@ function Visit() {
         <p className={eyebrow}>Find us</p>
         <h2 className={h2}>Come in <em>for a cup</em></h2>
         <ol className="mt-8 space-y-1">
-          {lines.map((l, i) => (
+          {lines.map((l) => (
             <li key={l} className="flex items-baseline gap-4 border-b border-border py-3 text-lg">
-              <span className={num}>0{i + 1}</span>{l}
+              {l}
             </li>
           ))}
         </ol>

@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Antonio, Archivo } from "next/font/google";
+import { Antonio, Archivo, Cormorant_Garamond } from "next/font/google";
 import { SITE_URL } from "@/data/site";
 import { MotionProvider } from "@/components/motion";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import "./globals.css";
 
 const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], display: "swap" });
+const serif = Cormorant_Garamond({ variable: "--font-cormorant", subsets: ["latin"], weight: ["500", "600"], style: ["italic"], display: "swap" });
 const antonio = Antonio({ variable: "--font-antonio", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, view
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${archivo.variable} ${antonio.variable} h-full antialiased`}>
+    <html lang="en" suppressHydrationWarning className={`${archivo.variable} ${antonio.variable} ${serif.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <MotionProvider>
           <div data-template="expressive" className="contents">

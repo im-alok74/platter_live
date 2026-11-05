@@ -36,9 +36,8 @@ export default function Location() {
         <Reveal>
           <p className={eyebrow}>Address</p>
           <ol className="mt-6 border-t border-border">
-            {addressLines.map((l, i) => (
+            {addressLines.map((l) => (
               <li key={l} className="flex items-baseline gap-4 border-b border-border py-4">
-                <span className="display text-xl text-gold">{String(i + 1).padStart(2, "0")}</span>
                 <span className="display text-2xl md:text-3xl">{l}</span>
               </li>
             ))}
@@ -75,10 +74,9 @@ export default function Location() {
             <h2 className="display mt-3 text-5xl md:text-7xl">How to <em>reach us</em></h2>
           </Reveal>
           <ol className="mt-10 border-t border-border">
-            {steps.map(([t, d], i) => (
+            {steps.map(([t, d]) => (
               <li key={t}>
                 <Reveal className="grid gap-3 border-b border-border py-8 md:grid-cols-[6rem_1fr_1.2fr] md:gap-8">
-                  <span className="display text-3xl text-gold">{String(i + 1).padStart(2, "0")}</span>
                   <h3 className="display text-2xl md:text-3xl">{t}</h3>
                   <p className="leading-relaxed text-muted">{d}</p>
                 </Reveal>

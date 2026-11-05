@@ -42,7 +42,6 @@ export default function Contact() {
           {ways.map(({ title, text, href }, i) => (
             <li key={title} className={i ? "border-t border-border md:border-l md:border-t-0" : ""}>
               <a href={href} {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group flex h-full min-h-44 flex-col justify-between gap-8 p-6 transition hover:bg-foreground hover:text-background md:p-8">
-                <span className="display text-xl text-gold group-hover:text-background">{String(i + 1).padStart(2, "0")}</span>
                 <span>
                   <span className="display block text-5xl md:text-6xl">{title}</span>
                   <span className="mt-2 block break-words text-sm text-muted group-hover:text-background/70">{text}</span>
@@ -77,10 +76,9 @@ export default function Contact() {
             <h2 className="display mt-3 text-5xl md:text-7xl">Quick <em>answers</em></h2>
           </Reveal>
           <div className="mt-10 border-t border-border">
-            {faqs.map(([q, a], i) => (
+            {faqs.map(([q, a]) => (
               <details key={q} className="group border-b border-border">
                 <summary className="flex min-h-16 cursor-pointer list-none items-center gap-4 py-4 [&::-webkit-details-marker]:hidden">
-                  <span className="display text-xl text-gold">{String(i + 1).padStart(2, "0")}</span>
                   <span className="display flex-1 text-xl md:text-3xl">{q}</span>
                   <span className="display text-3xl text-gold transition group-open:rotate-45">+</span>
                 </summary>

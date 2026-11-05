@@ -60,10 +60,9 @@ export default function About() {
             <h2 className="display mt-3 text-5xl md:text-7xl">The Platter <em>way</em></h2>
           </Reveal>
           <ol className="mt-12 border-t border-border">
-            {values.map(({ title, text }, i) => (
+            {values.map(({ title, text }) => (
               <li key={title}>
                 <Reveal className="grid gap-3 border-b border-border py-8 md:grid-cols-[6rem_1fr_1.2fr] md:gap-8">
-                  <span className="display text-3xl text-gold">{String(i + 1).padStart(2, "0")}</span>
                   <h3 className="display text-3xl md:text-4xl">{title}</h3>
                   <p className="leading-relaxed text-muted">{text}</p>
                 </Reveal>
