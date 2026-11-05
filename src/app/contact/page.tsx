@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClockIcon, PhoneIcon, PinIcon } from "@/components/icons";
+import { ClockIcon, PinIcon } from "@/components/icons";
 import { Reveal } from "@/components/motion";
 import { PageHeader } from "@/components/page-header";
 import { SocialOrbs } from "@/components/social";
@@ -15,58 +15,90 @@ export const metadata: Metadata = {
 };
 
 const wrap = "mx-auto w-full max-w-6xl px-4";
-const card = "flex h-full flex-col justify-between gap-4 rounded-3xl border border-border bg-surface p-6 shadow-card transition hover:-translate-y-1 hover:border-brand";
+const eyebrow = "text-xs font-semibold uppercase tracking-[0.3em] text-gold";
+const ghost = "inline-flex min-h-12 items-center justify-center gap-2 border border-foreground/40 px-7 text-sm font-semibold uppercase tracking-[0.14em] transition hover:bg-foreground/10 active:scale-[0.98]";
+
+const faqs = [
+  ["What are your opening hours?", `We are open every day, ${formatTime(hours.open)} to ${formatTime(hours.close)}. No weekly off.`],
+  ["Do you take table bookings?", "Walk-ins are welcome. For large groups, please call or WhatsApp us first."],
+  ["Is there veg and non-veg?", "Yes. Vegetarian and non-vegetarian dishes are clearly marked on the menu."],
+  ["Can I order takeaway?", "Yes, takeaway is available."],
+  ["Where exactly are you?", "Platter 9, Lower Ground Floor, Rajasthan International Centre, Sansthan Path, JLN Marg, Jhalana Doongri, Jaipur 302017."],
+  ["How do I reach you?", "Call or WhatsApp us on the number above, or send an email. We usually reply fastest on WhatsApp."],
+];
 
 export default function Contact() {
   const ways = [
-    { title: "Call", text: contact.phone.replace("+91", "+91 "), href: telHref(contact.phone), cta: "Call now", Icon: PhoneIcon },
-    { title: "WhatsApp", text: "Chat with us, ask about tables or timings", href: waHref(contact.whatsapp), cta: "Open WhatsApp", Icon: PhoneIcon },
-    { title: "Email", text: contact.email, href: `mailto:${contact.email}`, cta: "Send email", Icon: PinIcon },
+    { title: "Call", text: contact.phone.replace("+91", "+91 "), href: telHref(contact.phone) },
+    { title: "WhatsApp", text: "Ask about tables or timings", href: waHref(contact.whatsapp) },
+    { title: "Email", text: contact.email, href: `mailto:${contact.email}` },
   ];
   return (
     <main>
       <PageHeader eyebrow="Say hello" title="Contact">Questions, a big booking or just a hello. We usually reply fastest on WhatsApp.</PageHeader>
 
-      <section className={`${wrap} pt-12`}>
-        <ul className="grid gap-4 md:grid-cols-3">
-          {ways.map(({ title, text, href, cta, Icon }, i) => (
-            <li key={title}>
-              <Reveal delay={i * 0.08} className="h-full">
-                <a href={href} {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className={card}>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand"><Icon width={26} height={26} /></span>
-                  <span><span className="block text-xl font-semibold">{title}</span><span className="mt-1 block break-words text-sm text-muted">{text}</span></span>
-                  <span className="text-sm font-semibold text-brand">{cta} →</span>
-                </a>
-              </Reveal>
+      <section className="border-b border-border">
+        <ul className={`${wrap} grid md:grid-cols-3`}>
+          {ways.map(({ title, text, href }, i) => (
+            <li key={title} className={i ? "border-t border-border md:border-l md:border-t-0" : ""}>
+              <a href={href} {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group flex h-full min-h-44 flex-col justify-between gap-8 p-6 transition hover:bg-foreground hover:text-background md:p-8">
+                <span className="display text-xl text-gold group-hover:text-background">{String(i + 1).padStart(2, "0")}</span>
+                <span>
+                  <span className="display block text-5xl md:text-6xl">{title}</span>
+                  <span className="mt-2 block break-words text-sm text-muted group-hover:text-background/70">{text}</span>
+                </span>
+              </a>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className={`${wrap} grid gap-4 pt-12 md:grid-cols-2`}>
+      <section className={`${wrap} grid gap-12 py-16 md:grid-cols-2 md:py-24`}>
         <Reveal>
-          <div className="h-full rounded-3xl border border-border bg-surface p-6 shadow-card md:p-8">
-            <h2 className="font-display text-2xl">Send us a message</h2>
-            <p className="mb-5 mt-1 text-sm text-muted">It opens in WhatsApp with your message ready to send.</p>
-            <MessageForm />
-          </div>
+          <p className={eyebrow}>Write to us</p>
+          <h2 className="display mt-3 text-4xl md:text-6xl">Send a <em>message</em></h2>
+          <p className="mb-6 mt-3 text-sm text-muted">It opens in WhatsApp with your message ready to send.</p>
+          <MessageForm />
         </Reveal>
         <Reveal delay={0.08}>
-          <div className="h-full space-y-5 rounded-3xl bg-espresso p-6 text-[#fbf6ef] md:p-8">
-            <h2 className="font-display text-2xl">Visit us</h2>
-            <p className="flex items-start gap-3"><PinIcon className="mt-0.5 shrink-0 text-gold" /><span className="leading-relaxed text-[#d9cbbd]">{contact.address}</span></p>
-            <p className="flex items-start gap-3"><ClockIcon className="mt-0.5 shrink-0 text-gold" /><span className="text-[#d9cbbd]">Every day, {formatTime(hours.open)} to {formatTime(hours.close)}</span></p>
-            <a href={contact.maps_url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center rounded-full border-2 border-[#fbf6ef]/60 px-6 font-semibold transition hover:bg-[#fbf6ef]/10">Get directions</a>
+          <div className="h-full border border-border bg-espresso p-6 md:p-8">
+            <p className={eyebrow}>Visit us</p>
+            <p className="mt-6 flex items-start gap-3"><PinIcon className="mt-0.5 shrink-0 text-gold" /><span className="leading-relaxed text-muted">{contact.address}</span></p>
+            <p className="mt-4 flex items-start gap-3"><ClockIcon className="mt-0.5 shrink-0 text-gold" /><span className="text-muted">Every day, {formatTime(hours.open)} to {formatTime(hours.close)}</span></p>
+            <a href={contact.maps_url} target="_blank" rel="noopener noreferrer" className={`${ghost} mt-8`}>Get directions</a>
           </div>
         </Reveal>
       </section>
 
-      <section className={`${wrap} pb-4 pt-16`}>
-        <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-text">Follow along</p>
-          <h2 className="display mt-2 text-4xl md:text-6xl">Find us <em className="text-brand">online.</em></h2>
-          <SocialOrbs className="mt-8" />
-        </Reveal>
+      <section className="border-t border-border">
+        <div className={`${wrap} py-16 md:py-24`}>
+          <Reveal>
+            <p className={eyebrow}>Good to know</p>
+            <h2 className="display mt-3 text-5xl md:text-7xl">Quick <em>answers</em></h2>
+          </Reveal>
+          <div className="mt-10 border-t border-border">
+            {faqs.map(([q, a], i) => (
+              <details key={q} className="group border-b border-border">
+                <summary className="flex min-h-16 cursor-pointer list-none items-center gap-4 py-4 [&::-webkit-details-marker]:hidden">
+                  <span className="display text-xl text-gold">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="display flex-1 text-xl md:text-3xl">{q}</span>
+                  <span className="display text-3xl text-gold transition group-open:rotate-45">+</span>
+                </summary>
+                <p className="pb-6 pl-12 leading-relaxed text-muted md:pl-14">{a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border">
+        <div className={`${wrap} pb-8 pt-16 md:pt-24`}>
+          <Reveal>
+            <p className={eyebrow}>Follow along</p>
+            <h2 className="display mt-3 text-5xl md:text-7xl">Find us <em>online</em></h2>
+            <SocialOrbs className="mt-8" />
+          </Reveal>
+        </div>
       </section>
     </main>
   );

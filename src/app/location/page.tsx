@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ClockIcon, PhoneIcon, PinIcon } from "@/components/icons";
 import { Reveal } from "@/components/motion";
 import { OpenBadge } from "@/components/open-badge";
 import { PageHeader } from "@/components/page-header";
@@ -15,9 +14,12 @@ export const metadata: Metadata = {
 };
 
 const wrap = "mx-auto w-full max-w-6xl px-4";
-const primary = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand px-7 text-base font-semibold text-brand-foreground shadow-card transition hover:brightness-110 active:scale-95";
-const ghost = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-foreground/25 px-7 text-base font-semibold transition hover:bg-foreground/5 active:scale-95";
+const eyebrow = "text-xs font-semibold uppercase tracking-[0.3em] text-gold";
+const primary = "inline-flex min-h-12 items-center justify-center gap-2 bg-brand px-7 text-sm font-semibold uppercase tracking-[0.14em] text-brand-foreground transition hover:bg-foreground active:scale-[0.98]";
+const ghost = "inline-flex min-h-12 items-center justify-center gap-2 border border-foreground/40 px-7 text-sm font-semibold uppercase tracking-[0.14em] transition hover:bg-foreground/10 active:scale-[0.98]";
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+const addressLines = ["Platter 9, Lower Ground Floor", "Rajasthan International Centre", "Sansthan Path, JLN Marg", "Jhalana Doongri, Jaipur 302017"];
 
 const steps = [
   ["Head to Rajasthan International Centre", "RIC is on Sansthan Path, off JLN Marg, near Jhalana Doongri in Jaipur."],
@@ -26,60 +28,71 @@ const steps = [
 ];
 
 export default function Location() {
-  const row = "flex items-start gap-3";
   return (
     <main>
-      <PageHeader eyebrow="Find us" title="Location">Lower Ground Floor, Rajasthan International Centre, Jhalana, Jaipur.</PageHeader>
+      <PageHeader eyebrow="Find us" title="Location">Lower Ground Floor, Rajasthan International Centre, Jaipur.</PageHeader>
 
-      <section className={`${wrap} grid gap-4 pt-12 md:grid-cols-2`}>
+      <section className={`${wrap} grid gap-12 py-16 md:grid-cols-2 md:py-24`}>
         <Reveal>
-          <div className="h-full space-y-5 rounded-3xl border border-border bg-surface p-6 shadow-card md:p-8">
-            <OpenBadge hours={hours} />
-            <p className={row}><PinIcon className="mt-0.5 shrink-0 text-brand" /><span className="leading-relaxed">{contact.address}</span></p>
-            <p className={row}><PhoneIcon className="mt-0.5 shrink-0 text-brand" /><a className="inline-flex min-h-11 items-center font-medium text-brand" href={telHref(contact.phone)}>{contact.phone.replace("+91", "+91 ")}</a></p>
-            <div className="flex flex-wrap gap-3 pt-1">
-              <a href={contact.maps_url} target="_blank" rel="noopener noreferrer" className={primary}>Get directions</a>
-              <a href={telHref(contact.phone)} className={ghost}>Call us</a>
-            </div>
+          <p className={eyebrow}>Address</p>
+          <ol className="mt-6 border-t border-border">
+            {addressLines.map((l, i) => (
+              <li key={l} className="flex items-baseline gap-4 border-b border-border py-4">
+                <span className="display text-xl text-gold">{String(i + 1).padStart(2, "0")}</span>
+                <span className="display text-2xl md:text-3xl">{l}</span>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-6"><OpenBadge hours={hours} /></div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href={contact.maps_url} target="_blank" rel="noopener noreferrer" className={primary}>Get directions</a>
+            <a href={telHref(contact.phone)} className={ghost}>Call {contact.phone.replace("+91", "+91 ")}</a>
           </div>
         </Reveal>
         <Reveal delay={0.08}>
-          <iframe title="Platter on Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-80 w-full rounded-3xl border border-border md:h-full md:min-h-80" src={`https://www.google.com/maps?q=${encodeURIComponent("Rajasthan International Centre, JLN Marg, Jaipur")}&output=embed`} />
+          <p className={eyebrow}>Opening hours</p>
+          <ul className="mt-6 border-t border-border text-sm">
+            {days.map((d) => (
+              <li key={d} className="flex justify-between border-b border-border py-3"><span className="uppercase tracking-[0.12em]">{d}</span><span className="text-gold">{formatTime(hours.open)} to {formatTime(hours.close)}</span></li>
+            ))}
+          </ul>
         </Reveal>
       </section>
 
-      <section className={`${wrap} grid gap-4 pt-16 md:grid-cols-2`}>
-        <Reveal>
-          <div className="h-full rounded-3xl bg-espresso p-6 text-[#fbf6ef] md:p-8">
-            <h2 className="flex items-center gap-2 font-display text-2xl"><ClockIcon className="text-gold" /> Opening hours</h2>
-            <ul className="mt-5 divide-y divide-white/10 text-sm">
-              {days.map((d) => (
-                <li key={d} className="flex justify-between py-2.5"><span>{d}</span><span className="text-gold">{formatTime(hours.open)} to {formatTime(hours.close)}</span></li>
-              ))}
-            </ul>
-          </div>
-        </Reveal>
-        <Reveal delay={0.08}>
-          <div className="h-full rounded-3xl border border-border bg-surface p-6 shadow-card md:p-8">
-            <h2 className="font-display text-2xl">How to reach us</h2>
-            <ol className="mt-5 space-y-5">
-              {steps.map(([t, d], i) => (
-                <li key={t} className="flex gap-4">
-                  <span className="display flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold text-xl text-[#2a1d17]">{i + 1}</span>
-                  <div><h3 className="font-semibold">{t}</h3><p className="mt-0.5 text-sm text-muted">{d}</p></div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </Reveal>
+      <section className="border-t border-border">
+        <div className={`${wrap} py-16 md:py-24`}>
+          <Reveal>
+            <h2 className="display text-5xl md:text-7xl">On the <em>map</em></h2>
+            <iframe title="Platter on Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mt-8 h-80 w-full border border-border md:h-[28rem]" src={`https://www.google.com/maps?q=${encodeURIComponent("Rajasthan International Centre, JLN Marg, Jaipur")}&output=embed`} />
+          </Reveal>
+        </div>
       </section>
 
-      {gallery.length > 2 && (
-        <section className={`${wrap} pt-16`}>
-          <Reveal><h2 className="display text-4xl md:text-5xl">A look <em className="text-brand">inside.</em></h2></Reveal>
-          <ul className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-            {gallery.slice(4, 8).map((g) => (
-              <li key={g.url} className="tilt relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-sand">
+      <section className="border-t border-border">
+        <div className={`${wrap} py-16 md:py-24`}>
+          <Reveal>
+            <p className={eyebrow}>Getting here</p>
+            <h2 className="display mt-3 text-5xl md:text-7xl">How to <em>reach us</em></h2>
+          </Reveal>
+          <ol className="mt-10 border-t border-border">
+            {steps.map(([t, d], i) => (
+              <li key={t}>
+                <Reveal className="grid gap-3 border-b border-border py-8 md:grid-cols-[6rem_1fr_1.2fr] md:gap-8">
+                  <span className="display text-3xl text-gold">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="display text-2xl md:text-3xl">{t}</h3>
+                  <p className="leading-relaxed text-muted">{d}</p>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {gallery.length > 4 && (
+        <section className="border-t border-border">
+          <ul className="grid grid-cols-2 md:grid-cols-4">
+            {gallery.slice(4, 8).map((g, i) => (
+              <li key={g.url} className={`relative aspect-[3/4] overflow-hidden bg-sand ${i ? "border-l border-border" : ""}`}>
                 <Image src={g.url} alt="Inside Platter" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" />
               </li>
             ))}

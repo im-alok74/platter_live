@@ -1,66 +1,34 @@
 @import "tailwindcss";
 @import "./fx.css";
 
-/* Design tokens. Everything else uses these. */
+/* Design tokens. Dark, editorial look (espresso brown, cream type, square buttons). Everything else uses these. */
 :root {
-  --background: #fbf6ef;
-  --surface: #ffffff;
-  --foreground: #231f1c;
-  --muted: #6b5f55;
-  --border: #e6dccf;
-  --brand: #b3202a;
-  --brand-foreground: #ffffff;
+  color-scheme: dark;
+  --background: #2a1a13;
+  --surface: #33211a;
+  --foreground: #f2e8da;
+  --muted: #c2b19f;
+  --border: rgb(242 232 218 / 0.16);
+  --brand: #e6d5bf; /* cream accent: filled buttons, links */
+  --brand-foreground: #2a1a13;
   --taupe: #9c8a76;
-  --espresso: #2a1d17;
+  --espresso: #1a0f0a;
   --gold: #c9a25b;
-  --gold-text: #8a6420; /* gold for small text on cream: 4.9:1 */
-  --sand: #f1e6d6;
-  --info: #1f6f99; /* chair blue, darkened for AA on cream */
-  --veg: #1a7f37;
-  --nonveg: #b3202a;
+  --gold-text: #c9a25b;
+  --sand: #241610;
+  --info: #5fb4dc;
+  --veg: #4cc26e;
+  --nonveg: #e0525c;
+  --red: #c42a33; /* Platter logo red, for small highlights */
 
-  --radius-card: 16px;
-  --radius-sheet: 28px;
-  --shadow-card: 0 1px 2px rgb(35 31 28 / 0.06), 0 8px 24px rgb(35 31 28 / 0.07);
+  --radius-card: 0px;
+  --radius-sheet: 0px;
+  --shadow-card: none;
 
   --dur-fast: 150ms;
   --dur-base: 240ms;
   --dur-slow: 450ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --background: #1b1816;
-    --surface: #26221f;
-    --foreground: #f4ece3;
-    --muted: #b3a597;
-    --border: #3a3430;
-    --sand: #221e1b;
-    --gold-text: #c9a25b;
-    --brand: #e0525c;
-    --brand-foreground: #1b1816;
-    --info: #5fb4dc;
-    --veg: #4cc26e;
-    --nonveg: #e0525c;
-    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
-  }
-}
-
-:root[data-theme="dark"] {
-  --sand: #221e1b;
-  --gold-text: #c9a25b;
-  --background: #1b1816;
-  --surface: #26221f;
-  --foreground: #f4ece3;
-  --muted: #b3a597;
-  --border: #3a3430;
-  --brand: #e0525c;
-  --brand-foreground: #1b1816;
-  --info: #5fb4dc;
-  --veg: #4cc26e;
-  --nonveg: #e0525c;
-  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
 }
 
 @theme inline {
@@ -79,9 +47,8 @@
   --color-info: var(--info);
   --color-veg: var(--veg);
   --color-nonveg: var(--nonveg);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-fraunces);
-  --font-script: var(--font-allura);
+  --font-sans: var(--font-archivo);
+  --font-display: var(--font-antonio);
   --radius-card: var(--radius-card);
   --radius-sheet: var(--radius-sheet);
   --shadow-card: var(--shadow-card);
@@ -90,7 +57,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-archivo), system-ui, sans-serif;
   padding-bottom: env(safe-area-inset-bottom);
 }
 
@@ -131,9 +98,10 @@ body {
 }
 .kitchen-new { animation: kitchen-new 700ms var(--ease-out) both; }
 
-/* Big serif headings sit tighter, like a printed menu. */
+/* Tall condensed headings, uppercase, like a poster. */
 @layer components {
-  .display { font-family: var(--font-fraunces), serif; letter-spacing: -0.02em; line-height: 1.05; }
+  .display { font-family: var(--font-antonio), Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.01em; line-height: 0.95; font-weight: 400; }
+  .display em { font-style: normal; color: var(--gold); }
 }
 
 /* Scrolling ticker on the home page. Stops for people who prefer reduced motion. */

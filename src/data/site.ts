@@ -5,6 +5,9 @@ import type { Hours } from "@/lib/hours";
 /** Everything the public site shows. Edit this file (and menu-data.json) to change it; there is no database. */
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
+/** Hero background video, e.g. "/hero.mp4" (file in public/). Empty = video part pending; the animated coffee cup shows instead. */
+export const heroVideo = "";
+
 export const hours: Hours = { open: "11:00", close: "22:30", weekly_off: [] };
 
 export const contact = {
@@ -17,6 +20,9 @@ export const contact = {
   // ponytail: Platter's Facebook page URL not known yet; replace with the real page link.
   facebook: "https://www.facebook.com/",
 };
+
+/** Shown in the header and footer as "Built by Stackfox". */
+export const credit = { name: "Stackfox", url: "https://stackfox.in" };
 
 export const legal = { entity: "Kehwa", tagline: "A unit of Kehwa", fssai: "12223026002434", gst_number: "08AARFK0670K1ZW" };
 

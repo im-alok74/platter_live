@@ -1,6 +1,6 @@
 "use client";
 import { DishPhoto } from "@/components/dish-photo";
-import { Beans, SplitText, Steam } from "@/components/fx/fx";
+import { SplitText } from "@/components/fx/fx";
 import { Reveal } from "@/components/motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { formatPrice } from "@/lib/format";
@@ -15,7 +15,7 @@ const badgeStyle: Record<string, string> = {
 function VegMark({ veg }: { veg: boolean }) {
   const c = veg ? "border-veg" : "border-nonveg";
   return (
-    <span role="img" aria-label={veg ? "Vegetarian" : "Non-vegetarian"} className={`inline-flex h-5 w-5 items-center justify-center rounded-[4px] border-2 bg-surface/90 ${c}`}>
+    <span role="img" aria-label={veg ? "Vegetarian" : "Non-vegetarian"} className={`inline-flex h-5 w-5 items-center justify-center border-2 bg-surface/90 ${c}`}>
       <span className={`h-2.5 w-2.5 rounded-full ${veg ? "bg-veg" : "bg-nonveg"}`} />
     </span>
   );
@@ -29,10 +29,10 @@ function MenuCard({ item, index }: { item: MenuItem; index: number }) {
   const head = (
     <>
       <span className="relative block aspect-[4/3] w-full overflow-hidden bg-border">
-        <DishPhoto name={item.name} image={item.image} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw" className="transition duration-700 ease-out group-hover:scale-110" />
+        <DishPhoto name={item.name} image={item.image} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw" className="transition duration-700 ease-out group-hover:scale-105" />
         <span className="absolute left-2 top-2 flex flex-col items-start gap-1">
           {item.badges.map((b) => (
-            <span key={b} className={`rounded-md px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide shadow-sm ${badgeStyle[b] ?? "bg-foreground text-background"}`}>{b}</span>
+            <span key={b} className={`px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${badgeStyle[b] ?? "bg-foreground text-background"}`}>{b}</span>
           ))}
         </span>
         <span className="absolute right-2 top-2"><VegMark veg={item.is_veg} /></span>
@@ -44,7 +44,7 @@ function MenuCard({ item, index }: { item: MenuItem; index: number }) {
       </span>
       {(item.ingredients || item.method) && (
         <details className="px-3.5 pt-1.5 text-sm">
-          <summary className="inline-flex min-h-8 cursor-pointer items-center text-xs font-semibold text-brand">Details</summary>
+          <summary className="inline-flex min-h-8 cursor-pointer items-center text-xs font-semibold uppercase tracking-[0.14em] text-gold">Details</summary>
           {item.ingredients && <p className="mt-1 text-muted"><b className="font-semibold text-foreground">Ingredients:</b> {item.ingredients}</p>}
           {item.method && <p className="mt-1 text-muted"><b className="font-semibold text-foreground">Made:</b> {item.method}</p>}
         </details>
@@ -52,7 +52,7 @@ function MenuCard({ item, index }: { item: MenuItem; index: number }) {
     </>
   );
 
-  const frame = `group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface shadow-card ${item.sold_out ? "opacity-70" : ""}`;
+  const frame = `group flex h-full flex-col overflow-hidden border border-border bg-surface ${item.sold_out ? "opacity-70" : ""}`;
   const inner = (
     <>
         <div>{head}</div>
@@ -61,20 +61,20 @@ function MenuCard({ item, index }: { item: MenuItem; index: number }) {
           {item.variants.length > 0 && (
             <div role="group" aria-label={`Options for ${item.name}`} className="mb-2 flex flex-wrap gap-1.5">
               {item.variants.map((v) => (
-                <button key={v.id} type="button" aria-pressed={variantId === v.id} onClick={() => setVariantId(v.id)} className={`min-h-11 rounded-md border px-2.5 text-xs font-medium transition active:scale-95 ${variantId === v.id ? "border-brand bg-brand/10 text-brand" : "border-border text-muted"}`}>
+                <button key={v.id} type="button" aria-pressed={variantId === v.id} onClick={() => setVariantId(v.id)} className={`min-h-11 border px-2.5 text-xs font-medium transition active:scale-95 ${variantId === v.id ? "border-brand bg-brand/10 text-brand" : "border-border text-muted"}`}>
                   {v.name}
                 </button>
               ))}
             </div>
           )}
           <div className="flex items-center justify-between gap-2">
-            <span className="text-lg font-bold tabular-nums">{formatPrice(price)}</span>
+            <span className="font-display text-xl tabular-nums text-gold">{formatPrice(price)}</span>
           </div>
         </div>
     </>
   );
 
-  return <li className="tilt"><Reveal delay={(index % 4) * 0.06} className={frame}>{inner}</Reveal></li>;
+  return <li><Reveal delay={(index % 4) * 0.06} className={frame}>{inner}</Reveal></li>;
 }
 
 export function MenuBrowser({ categories, summary }: { categories: MenuCategory[]; summary?: string }) {
@@ -122,18 +122,16 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
 
   return (
     <>
-      <div className="relative isolate overflow-hidden bg-espresso text-[#fbf6ef]">
-        <div className="fx-only"><Beans count={4} /></div>
-        <div className="relative mx-auto max-w-5xl px-4 pb-7 pt-7">
-          <Steam className="fx-only absolute right-6 top-4 h-20 w-14 text-[#fbf6ef]/70 md:right-0" />
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Eat &amp; drink</p>
-          <h2 className="display mt-2 text-5xl [[data-template=expressive]_&]:text-6xl md:[[data-template=expressive]_&]:text-8xl"><SplitText text="Our menu" /></h2>
-          <p className="mt-2 text-sm text-[#d9cbbd]">{summary ?? "Pick what you like."} · {total} {total === 1 ? "item" : "items"}</p>
+      <div className="border-b border-border bg-espresso">
+        <div className="mx-auto w-full max-w-6xl px-4 pb-10 pt-12 md:pb-14 md:pt-16">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Eat &amp; drink</p>
+          <h2 className="display mt-3 text-6xl md:text-8xl"><SplitText text="Our menu" /></h2>
+          <p className="mt-4 text-sm text-muted">{summary ?? "Pick what you like."} · {total} {total === 1 ? "item" : "items"}</p>
         </div>
       </div>
 
-      <div className="sticky top-16 z-30 border-b border-border bg-background/95 backdrop-blur">
-        <div className="mx-auto max-w-5xl px-4 pt-3">
+      <div className="sticky top-[104px] z-30 md:top-[108px] border-b border-border bg-background/95 backdrop-blur">
+        <div className="mx-auto w-full max-w-6xl px-4 pt-3">
           <div className="flex items-center gap-3">
             <input
               type="search"
@@ -141,11 +139,11 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search the menu"
               aria-label="Search the menu"
-              className="min-h-11 min-w-0 flex-1 rounded-full border border-border bg-surface px-4 text-base outline-none focus:border-brand"
+              className="min-h-11 min-w-0 flex-1 rounded-none border border-border bg-surface px-4 text-base outline-none focus:border-brand"
             />
             <label className="flex min-h-11 shrink-0 cursor-pointer items-center gap-2 text-sm font-medium">
               <input type="checkbox" role="switch" checked={vegOnly} onChange={(e) => setVegOnly(e.target.checked)} className="peer sr-only" />
-              <span className="relative h-6 w-10 rounded-full bg-border transition-colors peer-checked:bg-veg peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-transform peer-checked:after:translate-x-4" />
+              <span className="relative h-6 w-10 bg-border transition-colors peer-checked:bg-veg peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:bg-foreground after:transition-transform peer-checked:after:translate-x-4" />
               Veg
             </label>
           </div>
@@ -156,7 +154,7 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
                 data-slug={c.slug}
                 href={`#${c.slug}`}
                 aria-current={active === c.slug ? "true" : undefined}
-                className={`inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-full border px-4 text-sm font-medium transition active:scale-95 ${active === c.slug ? "border-espresso bg-espresso text-[#fbf6ef]" : "border-border bg-surface"}`}
+                className={`inline-flex min-h-10 shrink-0 items-center gap-1.5 border px-4 text-[11px] font-semibold uppercase tracking-[0.14em] transition active:scale-95 ${active === c.slug ? "border-foreground bg-foreground text-background" : "border-border bg-surface"}`}
               >
                 {c.name}
                 <span className={`text-xs ${active === c.slug ? "opacity-80" : "text-muted"}`}>{c.items.length}</span>
@@ -166,19 +164,20 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
         </div>
       </div>
 
-      <div className="mx-auto max-w-5xl px-4 pb-8">
+      <div className="mx-auto w-full max-w-6xl px-4 pb-28">
         {shown.length === 0 && (
           <div className="py-20 text-center">
             <p className="font-display text-xl">Nothing matches that</p>
             <p className="mt-1 text-muted">Try a different word, or clear the filters.</p>
-            <button onClick={() => { setQuery(""); setVegOnly(false); }} className="mt-4 min-h-11 rounded-full bg-brand px-5 text-sm font-semibold text-brand-foreground">Clear filters</button>
+            <button onClick={() => { setQuery(""); setVegOnly(false); }} className="mt-4 min-h-11 bg-brand px-5 text-sm font-semibold uppercase tracking-[0.14em] text-brand-foreground">Clear filters</button>
           </div>
         )}
-        {shown.map((c) => (
-          <section key={c.id} id={c.slug} className="scroll-mt-48 pt-8">
+        {shown.map((c, si) => (
+          <section key={c.id} id={c.slug} className="scroll-mt-56 pt-10">
             <div className="mb-4 flex items-center gap-3">
-              <h3 className="font-display text-2xl">{c.name}</h3>
-              <span aria-hidden className="h-px flex-1 bg-gradient-to-r from-brand/50 to-transparent" />
+              <span className="font-display text-xl text-gold">{String(si + 1).padStart(2, "0")}</span>
+              <h3 className="display text-3xl">{c.name}</h3>
+              <span aria-hidden className="h-px flex-1 bg-border" />
               <span className="text-sm text-muted">{c.items.length} {c.items.length === 1 ? "item" : "items"}</span>
             </div>
             <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
