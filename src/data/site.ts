@@ -8,6 +8,14 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:30
 /** Hero background video, e.g. "/hero.mp4" (file in public/). Empty = video part pending; the animated coffee cup shows instead. */
 export const heroVideo = "";
 
+export const NAV = [
+  { href: "/", label: "Home" },
+  { href: "/menu", label: "Menu" },
+  { href: "/about", label: "About" },
+  { href: "/location", label: "Location" },
+  { href: "/contact", label: "Contact" },
+] as const;
+
 export const hours: Hours = { open: "11:00", close: "22:30", weekly_off: [] };
 
 export const contact = {
@@ -17,8 +25,6 @@ export const contact = {
   address: "Platter 9 (Lower Ground Floor), Rajasthan International Centre (RIC), Sansthan Path, JLN Marg, Jhalana Doongri, Jaipur, Rajasthan 302017",
   maps_url: "https://maps.app.goo.gl/yQWZKutQKqLdydDy7",
   instagram: "https://www.instagram.com/platter_cafe",
-  // ponytail: Platter's Facebook page URL not known yet; replace with the real page link.
-  facebook: "https://www.facebook.com/",
 };
 
 /** Shown in the header and footer as "Built by Stackfox". */

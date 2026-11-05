@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 };
 
 const wrap = "mx-auto w-full max-w-6xl px-4";
-const eyebrow = "text-xs font-semibold uppercase tracking-[0.3em] text-gold";
-const primary = "inline-flex min-h-12 items-center justify-center gap-2 bg-brand px-7 text-sm font-semibold uppercase tracking-[0.14em] text-brand-foreground transition hover:bg-foreground active:scale-[0.98]";
+const eyebrow = "text-sm font-medium text-gold";
+const primary = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand px-7 text-sm font-semibold text-brand-foreground transition hover:bg-foreground active:scale-[0.98]";
 
 const values = [
   { title: "Coffee first", text: "From a quick espresso to cold brews, frappes and shakes. The coffee counter is where Platter started and where many of our regulars begin." },
@@ -45,7 +45,7 @@ export default function About() {
         <Reveal delay={0.1}>
           <div className="grid grid-cols-2 gap-3">
             {gallery.slice(0, 4).map((g, i) => (
-              <div key={g.url} className={`relative aspect-[3/4] overflow-hidden border border-border bg-sand ${i % 2 ? "mt-8" : ""}`}>
+              <div key={g.url} className={`relative aspect-[3/4] overflow-hidden rounded-2xl bg-sand ${i % 2 ? "mt-8" : ""}`}>
                 <Image src={g.url} alt="Inside Platter" fill sizes="(min-width: 768px) 25vw, 45vw" className="object-cover" />
               </div>
             ))}
@@ -77,7 +77,7 @@ export default function About() {
           {stats.map((x, i) => (
             <li key={x.label} className={`px-2 py-10 text-center md:py-16 ${i ? "border-l border-border" : ""}`}>
               <CountUp to={x.n} className="display block text-5xl leading-none text-gold md:text-8xl" />
-              <span className="mt-3 block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted md:text-sm">{x.label}</span>
+              <span className="mt-3 block text-xs font-medium text-muted md:text-base">{x.label}</span>
             </li>
           ))}
         </ul>

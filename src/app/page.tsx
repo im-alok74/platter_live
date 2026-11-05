@@ -8,10 +8,10 @@ import { telHref } from "@/lib/format";
 import { formatTime } from "@/lib/hours";
 
 const wrap = "mx-auto w-full max-w-6xl px-4";
-const eyebrow = "text-xs font-semibold uppercase tracking-[0.3em] text-gold";
+const eyebrow = "text-sm font-medium text-gold";
 const h2 = "display mt-3 text-5xl md:text-7xl";
-const primary = "inline-flex min-h-12 items-center justify-center gap-2 bg-brand px-7 text-sm font-semibold uppercase tracking-[0.14em] text-brand-foreground transition hover:bg-foreground active:scale-[0.98]";
-const ghost = "inline-flex min-h-12 items-center justify-center gap-2 border border-foreground/40 px-7 text-sm font-semibold uppercase tracking-[0.14em] transition hover:bg-foreground/10 active:scale-[0.98]";
+const primary = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand px-7 text-sm font-semibold text-brand-foreground transition hover:bg-foreground active:scale-[0.98]";
+const ghost = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-foreground/40 px-7 text-sm font-semibold transition hover:bg-foreground/10 active:scale-[0.98]";
 
 const cat = (slug: string) => menu.find((c) => c.slug === slug);
 const pic = (i: number) => gallery[i % gallery.length];
@@ -30,10 +30,10 @@ function Hero() {
       ) : (
         <Beans count={6} />
       )}
-      <div className={`${wrap} relative grid min-h-[calc(100svh-9rem)] items-center gap-10 pb-40 pt-14 md:grid-cols-[1.35fr_1fr] md:pb-44`}>
+      <div className={`${wrap} relative grid min-h-[calc(100svh-9rem)] items-center gap-10 pb-40 pt-8 md:grid-cols-[1.35fr_1fr] md:pb-44`}>
         <div>
           <p className={eyebrow}>Cafe &amp; Restro · Jaipur</p>
-          <h1 className="display mt-5 text-[clamp(4.6rem,17vw,11.5rem)] leading-[0.88]">
+          <h1 className="display mt-5 text-[clamp(4rem,14vw,9rem)] leading-[0.9]">
             <span className="block"><SplitText text="Coffee," /></span>
             <span className="block"><SplitText text="food &" delay={240} /></span>
             <span className="block text-gold"><SplitText text="friends." delay={480} /></span>
@@ -48,20 +48,20 @@ function Hero() {
         </div>
         {!heroVideo && (
           <div className="relative mx-auto hidden w-full max-w-sm md:block">
-            <CoffeeHero className="aspect-[4/5] w-full border border-border bg-sand" />
+            <CoffeeHero className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border bg-sand" />
           </div>
         )}
       </div>
-      <div className="absolute inset-x-0 bottom-0 z-10 border-t border-border bg-background/80 backdrop-blur-sm">
-        <ul className={`${wrap} grid grid-cols-3`}>
+      <div className="absolute inset-x-4 bottom-4 z-10 mx-auto max-w-6xl overflow-hidden rounded-2xl border border-border bg-background/60 backdrop-blur md:bottom-6">
+        <ul className="grid grid-cols-3">
           {tiles.map((t) => (
             <li key={t.t} className="border-r border-border last:border-r-0">
               <Link href={t.href} className="group flex items-center gap-3 px-2 py-3 md:gap-4 md:px-4">
-                <span className="relative hidden h-14 w-14 shrink-0 overflow-hidden bg-sand sm:block md:h-16 md:w-16">
+                <span className="relative hidden h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-sand sm:block md:h-16 md:w-16">
                   {t.img && <Image src={t.img} alt="" fill sizes="64px" className="object-cover transition duration-500 group-hover:scale-110" />}
                 </span>
                 <span>
-                  <span className="block text-xs font-semibold uppercase tracking-[0.12em] md:text-sm">{t.t}</span>
+                  <span className="block text-sm font-semibold">{t.t}</span>
                 </span>
               </Link>
             </li>
@@ -86,14 +86,14 @@ function Intro() {
         </p>
         <Link href="/about" className={`${ghost} mt-8`}>Our story</Link>
       </Reveal>
-      <ul className="grid grid-cols-3 gap-px bg-border">
+      <ul className="grid grid-cols-3 gap-3">
         {items.map(([cap, g], i) => (
-          <li key={cap} className="group bg-background">
+          <li key={cap} className="group overflow-hidden rounded-2xl bg-surface">
             <Reveal delay={i * 0.05}>
               <div className="relative aspect-[3/4] overflow-hidden bg-sand">
                 <Image src={g.url} alt={cap} fill sizes="(min-width: 768px) 20vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" />
               </div>
-              <p className="px-2 py-2 text-[11px] font-semibold uppercase tracking-[0.12em]">{cap}</p>
+              <p className="px-3 py-2 text-xs font-medium">{cap}</p>
             </Reveal>
           </li>
         ))}
@@ -164,8 +164,8 @@ function Counter() {
                   <span className="display block text-3xl leading-none transition group-hover:text-gold md:text-6xl">{title}</span>
                   <span className="mt-2 block max-w-lg text-sm text-muted">{text}</span>
                 </span>
-                <span className="relative h-20 w-20 overflow-hidden bg-sand md:h-32 md:w-44">
-                  {c?.image && <Image src={c.image.url} alt="" fill sizes="176px" className="object-cover transition duration-700 group-hover:scale-110" />}
+                <span className="relative h-20 w-20 overflow-hidden rounded-full bg-sand md:h-28 md:w-28">
+                  {c?.image && <Image src={c.image.url} alt="" fill sizes="112px" className="object-cover transition duration-700 group-hover:scale-110" />}
                 </span>
               </Link>
             </li>
@@ -186,10 +186,10 @@ function Gallery() {
           <p className={eyebrow}>Inside Platter</p>
           <h2 className={h2}>Come sit <em>with us</em></h2>
         </Reveal>
-        <ul className="mt-12 grid grid-cols-2 gap-px bg-border md:grid-cols-4">
+        <ul className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
           {shots.map((g, i) => (
-            <li key={g.url} className="group bg-background">
-              <div className="relative aspect-[3/4] overflow-hidden bg-sand">
+            <li key={g.url} className="group">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-sand">
                 <Image src={g.url} alt="Inside Platter" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" priority={i < 2} />
               </div>
             </li>
@@ -253,7 +253,7 @@ function Visit() {
         </div>
       </Reveal>
       <Reveal delay={0.08}>
-        <iframe title="Platter on Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-80 w-full border border-border md:h-full md:min-h-96" src={`https://www.google.com/maps?q=${encodeURIComponent("Rajasthan International Centre, JLN Marg, Jaipur")}&output=embed`} />
+        <iframe title="Platter on Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-80 w-full overflow-hidden rounded-2xl border border-border md:h-full md:min-h-96" src={`https://www.google.com/maps?q=${encodeURIComponent("Rajasthan International Centre, JLN Marg, Jaipur")}&output=embed`} />
       </Reveal>
     </section>
   );

@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 };
 
 const wrap = "mx-auto w-full max-w-6xl px-4";
-const eyebrow = "text-xs font-semibold uppercase tracking-[0.3em] text-gold";
-const primary = "inline-flex min-h-12 items-center justify-center gap-2 bg-brand px-7 text-sm font-semibold uppercase tracking-[0.14em] text-brand-foreground transition hover:bg-foreground active:scale-[0.98]";
-const ghost = "inline-flex min-h-12 items-center justify-center gap-2 border border-foreground/40 px-7 text-sm font-semibold uppercase tracking-[0.14em] transition hover:bg-foreground/10 active:scale-[0.98]";
+const eyebrow = "text-sm font-medium text-gold";
+const primary = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand px-7 text-sm font-semibold text-brand-foreground transition hover:bg-foreground active:scale-[0.98]";
+const ghost = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-foreground/40 px-7 text-sm font-semibold transition hover:bg-foreground/10 active:scale-[0.98]";
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 const addressLines = ["Platter 9, Lower Ground Floor", "Rajasthan International Centre", "Sansthan Path, JLN Marg", "Jhalana Doongri, Jaipur 302017"];
@@ -52,7 +52,7 @@ export default function Location() {
           <p className={eyebrow}>Opening hours</p>
           <ul className="mt-6 border-t border-border text-sm">
             {days.map((d) => (
-              <li key={d} className="flex justify-between border-b border-border py-3"><span className="uppercase tracking-[0.12em]">{d}</span><span className="text-gold">{formatTime(hours.open)} to {formatTime(hours.close)}</span></li>
+              <li key={d} className="flex justify-between border-b border-border py-3"><span>{d}</span><span className="text-gold">{formatTime(hours.open)} to {formatTime(hours.close)}</span></li>
             ))}
           </ul>
         </Reveal>
@@ -62,7 +62,7 @@ export default function Location() {
         <div className={`${wrap} py-16 md:py-24`}>
           <Reveal>
             <h2 className="display text-5xl md:text-7xl">On the <em>map</em></h2>
-            <iframe title="Platter on Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mt-8 h-80 w-full border border-border md:h-[28rem]" src={`https://www.google.com/maps?q=${encodeURIComponent("Rajasthan International Centre, JLN Marg, Jaipur")}&output=embed`} />
+            <iframe title="Platter on Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mt-8 h-80 w-full overflow-hidden rounded-2xl border border-border md:h-[28rem]" src={`https://www.google.com/maps?q=${encodeURIComponent("Rajasthan International Centre, JLN Marg, Jaipur")}&output=embed`} />
           </Reveal>
         </div>
       </section>
@@ -87,10 +87,10 @@ export default function Location() {
       </section>
 
       {gallery.length > 4 && (
-        <section className="border-t border-border">
-          <ul className="grid grid-cols-2 md:grid-cols-4">
-            {gallery.slice(4, 8).map((g, i) => (
-              <li key={g.url} className={`relative aspect-[3/4] overflow-hidden bg-sand ${i ? "border-l border-border" : ""}`}>
+        <section className={`${wrap} pb-16 md:pb-24`}>
+          <ul className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {gallery.slice(4, 8).map((g) => (
+              <li key={g.url} className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-sand">
                 <Image src={g.url} alt="Inside Platter" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover" />
               </li>
             ))}

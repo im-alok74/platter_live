@@ -10,13 +10,13 @@ import { MessageForm } from "./message-form";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Call, WhatsApp or email Platter Cafe & Restro, Jhalana, Jaipur. Find us on Instagram and Facebook.",
+  description: "Call, WhatsApp or email Platter Cafe & Restro, Jhalana, Jaipur. Find us on Instagram.",
   alternates: { canonical: "/contact" },
 };
 
 const wrap = "mx-auto w-full max-w-6xl px-4";
-const eyebrow = "text-xs font-semibold uppercase tracking-[0.3em] text-gold";
-const ghost = "inline-flex min-h-12 items-center justify-center gap-2 border border-foreground/40 px-7 text-sm font-semibold uppercase tracking-[0.14em] transition hover:bg-foreground/10 active:scale-[0.98]";
+const eyebrow = "text-sm font-medium text-gold";
+const ghost = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-foreground/40 px-7 text-sm font-semibold transition hover:bg-foreground/10 active:scale-[0.98]";
 
 const faqs = [
   ["What are your opening hours?", `We are open every day, ${formatTime(hours.open)} to ${formatTime(hours.close)}. No weekly off.`],
@@ -37,11 +37,11 @@ export default function Contact() {
     <main>
       <PageHeader eyebrow="Say hello" title="Contact">Questions, a big booking or just a hello. We usually reply fastest on WhatsApp.</PageHeader>
 
-      <section className="border-b border-border">
-        <ul className={`${wrap} grid md:grid-cols-3`}>
-          {ways.map(({ title, text, href }, i) => (
-            <li key={title} className={i ? "border-t border-border md:border-l md:border-t-0" : ""}>
-              <a href={href} {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group flex h-full min-h-44 flex-col justify-between gap-8 p-6 transition hover:bg-foreground hover:text-background md:p-8">
+      <section>
+        <ul className={`${wrap} grid gap-3 py-8 md:grid-cols-3`}>
+          {ways.map(({ title, text, href }) => (
+            <li key={title}>
+              <a href={href} {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group flex h-full min-h-44 flex-col justify-between gap-8 rounded-3xl border border-border bg-surface p-6 transition hover:bg-foreground hover:text-background md:p-8">
                 <span>
                   <span className="display block text-5xl md:text-6xl">{title}</span>
                   <span className="mt-2 block break-words text-sm text-muted group-hover:text-background/70">{text}</span>
@@ -60,7 +60,7 @@ export default function Contact() {
           <MessageForm />
         </Reveal>
         <Reveal delay={0.08}>
-          <div className="h-full border border-border bg-espresso p-6 md:p-8">
+          <div className="h-full rounded-3xl border border-border bg-espresso p-6 md:p-8">
             <p className={eyebrow}>Visit us</p>
             <p className="mt-6 flex items-start gap-3"><PinIcon className="mt-0.5 shrink-0 text-gold" /><span className="leading-relaxed text-muted">{contact.address}</span></p>
             <p className="mt-4 flex items-start gap-3"><ClockIcon className="mt-0.5 shrink-0 text-gold" /><span className="text-muted">Every day, {formatTime(hours.open)} to {formatTime(hours.close)}</span></p>

@@ -13,7 +13,7 @@ export function DishPhoto({ name, image, sizes, priority = false, label = true, 
   return (
     <div aria-hidden className={`absolute inset-0 flex flex-col items-center justify-center gap-1 bg-sand ${className}`}>
       <span className={`font-display leading-none text-gold/40 ${label ? "text-6xl md:text-7xl" : "text-3xl"}`}>{name.charAt(0).toUpperCase()}</span>
-      {label && <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">Photo coming soon</span>}
+      {label && <span className="text-xs font-medium text-muted">Photo coming soon</span>}
     </div>
   );
 }

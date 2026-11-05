@@ -70,9 +70,9 @@ function Dish({ item, onOpen }: { item: MenuItem; onOpen: (i: MenuItem) => void 
       <Plate item={item} onOpen={onOpen} />
       <div className="min-w-0 flex-1">
         <h4 className="flex items-start gap-2 text-base font-semibold leading-snug"><span>{item.name}</span><span className="mt-1"><VegMark veg={item.is_veg} /></span></h4>
-        <p className="font-display text-2xl leading-none text-gold">{formatPrice(price)}{item.sold_out && <span className="ml-2 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">Sold out</span>}</p>
+        <p className="font-display text-2xl leading-none text-gold">{formatPrice(price)}{item.sold_out && <span className="ml-2 font-sans text-[10px] font-semibold text-muted">Sold out</span>}</p>
         {item.description && <p className="mt-1.5 line-clamp-3 text-sm leading-relaxed text-muted">{item.description}</p>}
-        {item.badges.length > 0 && <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-gold">{item.badges.join(" · ")}</p>}
+        {item.badges.length > 0 && <p className="mt-1.5 text-[10px] font-semibold text-gold">{item.badges.join(" · ")}</p>}
         {item.variants.length > 0 && (
           <div role="group" aria-label={`Options for ${item.name}`} className="mt-2 flex flex-wrap gap-1.5">
             {item.variants.map((v) => (
@@ -109,7 +109,7 @@ function DishDialog({ item, onClose }: { item: MenuItem | null; onClose: () => v
           </div>
           <div className="relative p-6 md:p-10">
             <button type="button" onClick={() => ref.current?.close()} aria-label="Close" className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full border border-border text-xl transition hover:bg-foreground hover:text-background">×</button>
-            <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold"><VegMark veg={item.is_veg} />{item.is_veg ? "Vegetarian" : "Non-vegetarian"}</p>
+            <p className="flex items-center gap-2 text-xs font-semibold text-gold"><VegMark veg={item.is_veg} />{item.is_veg ? "Vegetarian" : "Non-vegetarian"}</p>
             <h3 className="display mt-4 text-4xl md:text-5xl">{item.name}</h3>
             <p className="mt-3 font-display text-4xl text-gold">{formatPrice(item.price)}</p>
             {item.variants.length > 0 && (
@@ -176,19 +176,19 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
           </span>
         ))}
         <div className="relative mx-auto flex min-h-[34rem] max-w-6xl flex-col items-center justify-center px-4 py-20 text-center md:min-h-[40rem]">
-          <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-muted"><span aria-hidden className="h-px w-8 bg-gold" />From the coffee bar &amp; the kitchen</p>
+          <p className="flex items-center gap-3 text-xs font-semibold text-muted"><span aria-hidden className="h-px w-8 bg-gold" />From the coffee bar and the kitchen</p>
           <h2 className="display mt-6 text-[clamp(5rem,20vw,15rem)] leading-[0.85]">
             <RiseTitle text="The menu" />
           </h2>
           <p className="mt-8 max-w-xl text-base leading-relaxed text-muted md:text-lg">
             Coffee and cold brews, breakfast, pizza and pasta, tandoori starters, Indian mains and desserts. {total} dishes, cooked fresh every day.
           </p>
-          <a href="#menu-list" className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-brand px-7 text-sm font-semibold uppercase tracking-[0.14em] text-brand-foreground transition hover:bg-foreground">Browse the menu <span aria-hidden>↓</span></a>
+          <a href="#menu-list" className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-brand px-7 text-sm font-semibold text-brand-foreground transition hover:bg-foreground">Browse the menu <span aria-hidden>↓</span></a>
           {summary && <p className="mt-8 font-serif text-lg italic text-muted">{summary}</p>}
         </div>
       </section>
 
-      <div id="menu-list" className="sticky top-[104px] z-30 mx-auto max-w-6xl scroll-mt-28 px-4 pt-4 md:top-[108px]">
+      <div id="menu-list" className="sticky top-[76px] z-30 mx-auto max-w-6xl scroll-mt-28 px-4 pt-4 md:top-[80px]">
         <div className="flex flex-col gap-3 md:flex-row md:items-center">
           <div ref={chipRow} className="flex min-w-0 flex-1 gap-1 overflow-x-auto rounded-full border border-border bg-espresso/95 p-1.5 backdrop-blur [scrollbar-width:none]">
             {shown.map((c) => (
@@ -226,7 +226,7 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
           <div className="py-24 text-center">
             <p className="display text-4xl">Nothing matches that</p>
             <p className="mt-2 text-muted">Try a different word, or clear the filters.</p>
-            <button onClick={() => { setQuery(""); setVegOnly(false); }} className="mt-6 min-h-12 rounded-full bg-brand px-7 text-sm font-semibold uppercase tracking-[0.14em] text-brand-foreground">Clear filters</button>
+            <button onClick={() => { setQuery(""); setVegOnly(false); }} className="mt-6 min-h-12 rounded-full bg-brand px-7 text-sm font-semibold text-brand-foreground">Clear filters</button>
           </div>
         )}
         {shown.map((c) => (
@@ -234,7 +234,7 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
             <div className="mb-8 flex items-baseline gap-5">
               <h3 className="font-serif text-4xl italic leading-none md:text-5xl">{c.name}</h3>
               <span aria-hidden className="h-px flex-1 bg-border" />
-              <span className="text-xs uppercase tracking-[0.2em] text-muted">{c.items.length} {c.items.length === 1 ? "dish" : "dishes"}</span>
+              <span className="text-xs text-muted">{c.items.length} {c.items.length === 1 ? "dish" : "dishes"}</span>
             </div>
             <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
               {c.items.map((i) => <Dish key={`${c.id}-${i.id}`} item={i} onOpen={setOpen} />)}
