@@ -19,11 +19,11 @@ const primary = "inline-flex min-h-12 items-center justify-center gap-2 rounded-
 const ghost = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-foreground/40 px-7 text-sm font-semibold transition hover:bg-foreground/10 active:scale-[0.98]";
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-const addressLines = ["Platter 9, Lower Ground Floor", "Rajasthan International Centre", "Sansthan Path, JLN Marg", "Jhalana Doongri, Jaipur 302017"];
+const addressLines = ["Platter Cafe, Lower Ground Floor", "Rajasthan International Centre", "Sansthan Path, JLN Marg", "Jhalana Doongri, Jaipur 302017"];
 
 const steps = [
   ["Head to Rajasthan International Centre", "RIC is on Sansthan Path, off JLN Marg, near Jhalana Doongri in Jaipur."],
-  ["Go to the Lower Ground Floor", "Platter 9 is on the Lower Ground Floor of the centre."],
+  ["Go to the Lower Ground Floor", "Platter Cafe is on the Lower Ground Floor of the centre."],
   ["Walk in and pick a table", "No booking needed for regular visits. For a large group, give us a call first."],
 ];
 

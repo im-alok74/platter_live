@@ -22,7 +22,7 @@ export const contact = {
   phone: "+919829044442",
   whatsapp: "919829044442",
   email: "mshamama@hotmail.com",
-  address: "Platter 9 (Lower Ground Floor), Rajasthan International Centre (RIC), Sansthan Path, JLN Marg, Jhalana Doongri, Jaipur, Rajasthan 302017",
+  address: "Platter Cafe (Lower Ground Floor), Rajasthan International Centre (RIC), Sansthan Path, JLN Marg, Jhalana Doongri, Jaipur, Rajasthan 302017",
   maps_url: "https://maps.app.goo.gl/yQWZKutQKqLdydDy7",
   instagram: "https://www.instagram.com/platter_cafe",
 };

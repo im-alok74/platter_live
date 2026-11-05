@@ -202,7 +202,7 @@ function Gallery() {
 
 const faq = [
   ["When are you open?", `Every day, ${formatTime(hours.open)} to ${formatTime(hours.close)}. There is no weekly off.`],
-  ["Where is Platter?", "Platter 9, Lower Ground Floor, Rajasthan International Centre, Sansthan Path, JLN Marg, Jaipur."],
+  ["Where is Platter?", "Platter Cafe, Lower Ground Floor, Rajasthan International Centre, Sansthan Path, JLN Marg, Jaipur."],
   ["Do you have vegetarian food?", "Yes. Vegetarian and non-vegetarian dishes are marked on every menu card."],
   ["Is takeaway available?", "Yes. You can dine in or take your order away."],
   ["Can I book a table for a group?", "For bigger groups, please call or WhatsApp us first so we can keep a table ready."],
@@ -233,7 +233,7 @@ function Faq() {
 }
 
 function Visit() {
-  const lines = ["Platter 9, Lower Ground Floor", "Rajasthan International Centre", "Sansthan Path, JLN Marg", "Jhalana Doongri, Jaipur 302017"];
+  const lines = ["Platter Cafe, Lower Ground Floor", "Rajasthan International Centre", "Sansthan Path, JLN Marg", "Jhalana Doongri, Jaipur 302017"];
   return (
     <section className={`${wrap} grid gap-12 py-24 md:grid-cols-2`}>
       <Reveal>

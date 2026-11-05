@@ -23,7 +23,7 @@ const faqs = [
   ["Do you take table bookings?", "Walk-ins are welcome. For large groups, please call or WhatsApp us first."],
   ["Is there veg and non-veg?", "Yes. Vegetarian and non-vegetarian dishes are clearly marked on the menu."],
   ["Can I order takeaway?", "Yes, takeaway is available."],
-  ["Where exactly are you?", "Platter 9, Lower Ground Floor, Rajasthan International Centre, Sansthan Path, JLN Marg, Jhalana Doongri, Jaipur 302017."],
+  ["Where exactly are you?", "Platter Cafe, Lower Ground Floor, Rajasthan International Centre, Sansthan Path, JLN Marg, Jhalana Doongri, Jaipur 302017."],
   ["How do I reach you?", "Call or WhatsApp us on the number above, or send an email. We usually reply fastest on WhatsApp."],
 ];
 
