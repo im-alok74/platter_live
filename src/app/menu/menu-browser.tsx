@@ -152,7 +152,7 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
         const hit = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
         if (hit) setActive(hit.target.id);
       },
-      { rootMargin: "-170px 0px -70% 0px" },
+      { rootMargin: "-190px 0px -70% 0px" },
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
@@ -188,21 +188,8 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
         </div>
       </section>
 
-      <div id="menu-list" className="sticky top-[76px] z-30 mx-auto max-w-6xl scroll-mt-28 px-4 pt-4 md:top-[80px]">
-        <div className="flex flex-col gap-3 md:flex-row md:items-center">
-          <div ref={chipRow} className="flex min-w-0 flex-1 gap-1 overflow-x-auto rounded-full border border-border bg-espresso/95 p-1.5 backdrop-blur [scrollbar-width:none]">
-            {shown.map((c) => (
-              <a
-                key={c.id}
-                data-slug={c.slug}
-                href={`#${c.slug}`}
-                aria-current={active === c.slug ? "true" : undefined}
-                className={`inline-flex min-h-10 shrink-0 items-center rounded-full px-4 text-sm font-semibold transition ${active === c.slug ? "bg-brand text-brand-foreground" : "text-foreground hover:bg-foreground/10"}`}
-              >
-                {c.name}
-              </a>
-            ))}
-          </div>
+      <div id="menu-list" className="sticky top-[76px] z-30 scroll-mt-28 bg-gradient-to-b from-background via-background/95 to-transparent pb-5 pt-3 md:top-[80px]">
+        <div className="mx-auto max-w-6xl space-y-3 px-4">
           <div className="flex items-center gap-3">
             <input
               type="search"
@@ -210,13 +197,30 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Find a dish: latte, pizza, dosa…"
               aria-label="Search the menu"
-              className="min-h-12 min-w-0 flex-1 rounded-full border border-border bg-espresso/95 px-5 text-base outline-none backdrop-blur placeholder:text-muted focus:border-gold md:w-72 md:flex-none"
+              className="min-h-12 min-w-0 flex-1 rounded-full border border-border bg-espresso px-5 text-base outline-none placeholder:text-muted focus:border-gold"
             />
-            <label className="flex min-h-12 shrink-0 cursor-pointer items-center gap-2 text-sm font-medium">
+            <label className="flex min-h-12 shrink-0 cursor-pointer items-center gap-2 rounded-full border border-border bg-espresso px-4 text-sm font-medium">
               <input type="checkbox" role="switch" checked={vegOnly} onChange={(e) => setVegOnly(e.target.checked)} className="peer sr-only" />
               <span className="relative h-6 w-10 rounded-full bg-border transition-colors peer-checked:bg-veg peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-transform peer-checked:after:translate-x-4" />
-              Veg
+              Veg only
             </label>
+          </div>
+          <div className="flex items-center gap-2">
+            <button type="button" aria-label="Scroll categories left" onClick={() => chipRow.current?.scrollBy({ left: -320, behavior: "smooth" })} className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border bg-espresso text-lg transition hover:bg-foreground hover:text-background md:flex">←</button>
+            <div ref={chipRow} className="flex min-w-0 flex-1 gap-1 overflow-x-auto rounded-full border border-border bg-espresso p-1.5 [scrollbar-width:none] [mask-image:linear-gradient(to_right,transparent,#000_16px,#000_calc(100%-40px),transparent)] md:px-2">
+              {shown.map((c) => (
+                <a
+                  key={c.id}
+                  data-slug={c.slug}
+                  href={`#${c.slug}`}
+                  aria-current={active === c.slug ? "true" : undefined}
+                  className={`inline-flex min-h-10 shrink-0 items-center whitespace-nowrap rounded-full px-4 text-sm font-semibold transition ${active === c.slug ? "bg-brand text-brand-foreground" : "text-foreground hover:bg-foreground/10"}`}
+                >
+                  {c.name}
+                </a>
+              ))}
+            </div>
+            <button type="button" aria-label="Scroll categories right" onClick={() => chipRow.current?.scrollBy({ left: 320, behavior: "smooth" })} className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border bg-espresso text-lg transition hover:bg-foreground hover:text-background md:flex">→</button>
           </div>
         </div>
       </div>
@@ -230,7 +234,7 @@ export function MenuBrowser({ categories, summary }: { categories: MenuCategory[
           </div>
         )}
         {shown.map((c) => (
-          <section key={c.id} id={c.slug} className="scroll-mt-44 pt-14">
+          <section key={c.id} id={c.slug} className="scroll-mt-52 pt-10">
             <div className="mb-8 flex items-baseline gap-5">
               <h3 className="font-serif text-4xl italic leading-none md:text-5xl">{c.name}</h3>
               <span aria-hidden className="h-px flex-1 bg-border" />
