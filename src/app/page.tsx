@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Beans, CoffeeHero, SplitText } from "@/components/fx/fx";
 import { Magnetic } from "@/components/fx/fx-client";
+import { HeroVideo } from "@/components/hero-video";
 import { Reveal } from "@/components/motion";
 import { contact, gallery, heroVideo, hours, menu } from "@/data/site";
 import { telHref } from "@/lib/format";
@@ -24,15 +25,9 @@ function Hero() {
   ];
   return (
     <section className="relative isolate overflow-hidden bg-espresso">
-      {/* Background video, muted. Set heroVideo to "" in src/data/site.ts to fall back to the animated cup. */}
-      {heroVideo ? (
-        <>
-          <video className="absolute inset-0 -z-20 h-full w-full object-cover" src={heroVideo} autoPlay muted loop playsInline preload="auto" aria-hidden />
-          <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-espresso/90 via-espresso/60 to-espresso/30" />
-        </>
-      ) : (
-        <Beans count={6} />
-      )}
+      {/* Phones play the muted vertical video; larger screens keep the animated cup. */}
+      <HeroVideo src={heroVideo} />
+      <div className="hidden md:block"><Beans count={6} /></div>
       <div className={`${wrap} relative grid min-h-[calc(100svh-9rem)] items-center gap-10 pb-40 pt-8 md:grid-cols-[1.35fr_1fr] md:pb-44`}>
         <div>
           <p className={eyebrow}>Cafe &amp; Restro · Jaipur</p>
@@ -49,11 +44,9 @@ function Hero() {
             <Magnetic><Link href="/location" className={ghost}>Plan your visit</Link></Magnetic>
           </div>
         </div>
-        {!heroVideo && (
-          <div className="relative mx-auto hidden w-full max-w-sm md:block">
-            <CoffeeHero className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border bg-sand" />
-          </div>
-        )}
+        <div className="relative mx-auto hidden w-full max-w-sm md:block">
+          <CoffeeHero className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border bg-sand" />
+        </div>
       </div>
       <div className="absolute inset-x-4 bottom-4 z-10 mx-auto max-w-6xl overflow-hidden rounded-2xl border border-border bg-background/60 backdrop-blur md:bottom-6">
         <ul className="grid grid-cols-3">
