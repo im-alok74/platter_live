@@ -6,7 +6,7 @@ import type { Hours } from "@/lib/hours";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 /** Hero background video, e.g. "/hero.mp4" (file in public/). Empty = video part pending; the animated coffee cup shows instead. */
-export const heroVideo = "";
+export const heroVideo = "/hero.mp4";
 
 export const NAV = [
   { href: "/", label: "Home" },

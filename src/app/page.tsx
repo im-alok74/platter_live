@@ -24,9 +24,12 @@ function Hero() {
   ];
   return (
     <section className="relative isolate overflow-hidden bg-espresso">
-      {/* Video part is pending: set heroVideo in src/data/site.ts and it plays here behind the headline. */}
+      {/* Background video, muted. Set heroVideo to "" in src/data/site.ts to fall back to the animated cup. */}
       {heroVideo ? (
-        <video className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60" src={heroVideo} autoPlay muted loop playsInline aria-hidden />
+        <>
+          <video className="absolute inset-0 -z-20 h-full w-full object-cover" src={heroVideo} autoPlay muted loop playsInline preload="auto" aria-hidden />
+          <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-espresso/90 via-espresso/60 to-espresso/30" />
+        </>
       ) : (
         <Beans count={6} />
       )}
